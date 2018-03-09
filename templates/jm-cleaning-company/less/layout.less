@@ -1,0 +1,328 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// LAYOUT
+//---------------------------------------------------------------
+
+//site wrapper
+#jm-allpage {
+  position: relative;
+  background: @JMpageBackground;
+}
+
+.sticky-bar #jm-allpage {
+	padding-top: @JMbarHeight; //this value will be adjusted with jQuery if needed.
+}
+
+// top-bar
+// --------------------------
+
+#jm-bar-wrapp {
+	width: 100%;
+}
+
+#jm-top-bar {
+	color: @JMtopbarFontColor;
+  background: @JMtopbarBackground;
+  line-height: @JMtopbarHeight;
+  width: 100%;
+  border-bottom: 1px solid @JMtopbarBorder;
+  p {
+    margin: 0;
+  }
+}
+
+//sticky
+.sticky-bar #jm-bar-wrapp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  .box-sizing(border-box);
+  z-index: 9999;
+}
+
+// Bar
+// --------------------------
+
+#jm-bar {
+	color: @JMbarFontColor;
+  background: @JMbarBackground;
+  border-bottom: 1px solid @JMbarBorder;
+}
+
+#jm-logo-sitedesc {
+  #jm-logo {
+    vertical-align: top;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    a {
+      display: block;
+    }
+		span {
+			font-size: 2.5em;
+		}
+    img {
+    	border: 0;
+    }
+  }
+  #jm-sitedesc {
+    vertical-align: middle;
+  }
+}
+
+#jm-bar-left {
+	padding-top: 20px;
+  padding-bottom: 20px;
+  .transition(padding 0.3s ease 0s);
+}
+
+#jm-bar-right {
+	padding-top: 20px;
+  padding-bottom: 20px;
+  min-width: (@JMsearchWidth + 80);
+  .transition(padding 0.3s ease 0s);
+}
+
+//scrolled
+.scrolled #jm-bar-left {
+	padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.scrolled #jm-bar-right {
+	padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.scrolled .dj-megamenu {
+	margin: -10px 0;
+	li.dj-up {
+	  a.dj-up_a {
+			padding: ((@JMmegamenuElementHeight /2) - 10) 25px;
+	  }
+  }
+}
+
+// Header
+// --------------------------
+
+#jm-header {
+	color: @JMheaderFontColor;
+  background: @JMheaderBackground;
+}
+
+// system message
+// --------------------------  
+
+#jm-system-message {
+  padding-top: @JMbaseSpace;
+}
+
+// top
+// --------------------------
+
+#jm-top {
+	background: @JMtopBackground;
+	padding-top: @JMbaseSpace;
+}
+
+// breadcrumbs
+// --------------------------
+  
+#jm-font-switcher {
+  text-align: right;
+  margin: 0 0 15px;
+}
+
+// main
+// --------------------------
+
+#jm-main {
+	background: @JMmainBackground;
+	padding-top: @JMbaseSpace;
+}
+
+#jm-maincontent {
+  margin-bottom: @JMbaseSpace;
+}
+
+// bottom
+// --------------------------
+
+#jm-bottom {
+  background: @JMbottomBackground;
+  padding-top: @JMbaseSpace;
+}
+
+// footer
+// --------------------------
+
+#jm-footer-mod {
+	color: @JMfooterFontColor;
+  border-top: 1px solid @JMfooterBorder;
+  border-bottom: 1px solid @JMfooterBorder;
+  padding-top: @JMbaseSpace;
+  background: @JMfooterBackground;
+}
+
+#jm-footer {
+	color: @JMcopyrightFontColor;
+  font-size: (@JMbaseFontSize - 1);
+  padding: 35px 0;
+  background: @JMcopyrightBackground;
+}
+
+
+// Copyrights
+// --------------------------
+
+#jm-footer-center {
+  text-align: left;
+}
+
+#jm-footer-left + #jm-footer-center {
+  text-align: center;
+}
+
+#jm-footer-right {
+  text-align: right;
+}
+
+#jm-footer-left,
+#jm-footer-right,
+#jm-footer-center {
+  line-height: 30px;
+}
+
+#jm-back-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+  z-index: 9999;
+  a {
+    text-decoration: none;
+    display: block;
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  span {
+    display: block;
+    height: 60px;
+    .transition(all 1s ease 0s);
+    width: 60px;
+    background-color: @JMstyleDarken;  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../images/backtotop.png");
+    .opacity(30);
+    &:hover {
+      .opacity(60);
+    }
+  }
+}
+
+// section space / borders
+// --------------------------
+
+#jm-bar-wrapp + #jm-footer-mod {
+	border-top: none;
+}
+
+#jm-system-message + #jm-main {
+  padding-top: 0;
+}
+
+#jm-top + #jm-main,
+#jm-top + #jm-bottom {
+	padding-top: 0;
+}
+
+#jm-main + #jm-bottom {
+	padding-top: 0;
+}
+
+// template width in pixels
+// --------------------------
+
+.responsive-disabled-pixels() when(ispixel(@JMfluidGridContainerLg)) {
+  //set min width if responsive is disabled
+  .responsive-disabled {
+    min-width: @JMfluidGridContainerLg;
+    #jm-allpage {
+      padding: 0!important;
+      min-width: @JMfluidGridContainerLg;
+    }
+    #jm-top-bar {
+      position: static;
+    }
+  }
+}
+.responsive-disabled-pixels();
+
+// template width in percentage
+// --------------------------
+
+.responsive-disabled-percentage() when(ispercentage(@JMfluidGridContainerLg)) {
+  @media (max-width: 1170px) {
+    .container-fluid {
+      .box-sizing(border-box);
+      max-width: 100%;
+    }
+  }  
+  //set min width if responsive is disabled
+  .responsive-disabled {
+    min-width: 1170px;
+    #jm-allpage {
+      padding: 0!important;
+      min-width: 1170px;
+    }
+    #jm-bar-wrapp {
+      position: static;
+    }
+  }
+}
+.responsive-disabled-percentage();
+
+// font-switcher
+// --------------------------
+
+.texttoggler {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none!important;
+  margin: 0 1px;
+  display: inline-block;
+}
+
+.texttoggler.small {
+  font-size: 0.8em;
+}
+
+.texttoggler.normal {
+  font-size: 1.1em;
+}
+
+.texttoggler.large {
+  font-size: 1.3em;
+}
+
+.smallview #jm-maincontent {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.largeview #jm-maincontent {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+
+

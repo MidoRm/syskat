@@ -1,0 +1,50 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// TABS RTL
+//---------------------------------------------------------------
+
+#jm-allpage .djtabs.default-theme {
+	.djtabs-title {
+		text-align: right;
+	}
+	.djtabs-title-wrapper + .djtabs-title-wrapper .djtabs-title {
+  	margin-left: 0;
+  	margin-right: -1px;
+  }
+  .djtabs-panel {
+    .djtabs-panel-date {
+      float: right;
+      margin: 0 0 0 15px;
+    }
+    .djtabs-panel-title {
+      float: right;
+      margin: 0 0 0 15px;
+    }
+  }
+  .djtabs-panel > span.djtabs-panel-toggler {
+    float: left;
+  }
+  .djtabs-article-author,
+  .djtabs-article-category {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+  .djtab-custom-html {
+    margin: 0 0 0 8px;
+  }
+}
+
+#jm-allpage .djtabs.default-theme.accordion {
+  .djtabs-title {
+    padding: 20px 0 20px 30px;
+    &:after {
+      left: 5px;
+      right: auto;
+    }
+  }
+} 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.3" method="upgrade">
+<name>OS Gallery PKG Light</name>
+<author>www.ordasoft.com /Roman Akoev(akoevroman@gmail.com),Andrey Kvasnevskiy(akbet@mail.ru)</author>
+<authorEmail>support@ordasoft.com</authorEmail>
+<creationDate>September 2016</creationDate>
+<copyright>OrdaSoft 2016</copyright>
+<packagename>OS Gallery PKG</packagename>
+<license>GNU General Public License version 2 or later</license>
+<version>1.0.5</version>
+<url>http://ordasoft.com/os-responsive-image-gallery</url>
+<description><![CDATA[<img style="width:515px; display: block; margin: 0 auto;" src="../administrator/components/com_osgallery/assets/images/os-image-gallery.png">]]></description>
+<files folder="packages">
+    <folder type="component" id="com_osgallery">com_osgallery_light</folder>
+    <folder type="plugin" id="osgallery_system" group="system">plg_osgallery_system</folder>
+</files>
+</extension>

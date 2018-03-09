@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# Copyright (C) joomla-monster.com
+# License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+# Website: http://www.joomla-monster.com
+# Support: info@joomla-monster.com
+---------------------------------------------------------------*/
+
+/* ==========================================================================
+   CUSTOM styles
+   ========================================================================== */
+  
+/* Here you can add CSS styles to override the default template styles */
+
+#jm-poweredby {
+	display: none !important;
+} 
+
+#jm-footer-left + #jm-footer-center {
+	float: right !important;
+}
+#jmthemetoggler {
+    display: block;
+    right: -51px;
+    top: 50%;
+    margin-top: -25px;
+    position: absolute;
+    background: #383e49;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 3;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0 8px 8px 0;
+    -webkit-border-radius: 0 8px 8px 0;
+    border-bottom: 1px solid #2a2e37;
+    border-left: 1px solid #2a2e37;
+    box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    display: none;
+}
+#jm-logo-sitedesc #jm-logo img {
+    border: 0;
+    width: 150px;
+}
+

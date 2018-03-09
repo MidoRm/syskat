@@ -1,0 +1,684 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MODULES
+//---------------------------------------------------------------
+
+.span0 {
+  float: none !important;
+} 
+
+.span50 {
+  float: left !important;
+  width: 50% !important;
+}
+
+// default modules
+// --------------------------
+
+.jm-module {
+  margin-bottom: @JMbaseSpace;
+  .jm-title {
+    font-weight: 400;
+    font-family: @JMmoduleTitleFontFamily;
+    font-size: @JMmoduleTitleFontSize;
+    margin: 0 0 20px;
+    position: relative;
+    color: @JMmoduleTitleFontColor;
+  }
+}
+
+.moduletable {
+  margin: 0 0 20px;
+  > h3 {
+  	font-weight: 400;
+    font-family: @JMmoduleTitleFontFamily;
+    font-size: @JMmoduleTitleFontSize;
+    margin: 0 0 20px;
+    color: @JMmoduleTitleFontColor;
+  }
+}
+
+// sections modules changes
+#jm-header {
+	.jm-module {
+	  margin-top: @JMbaseSpace;
+	  margin-bottom: @JMbaseSpace;
+	  .jm-title {
+	    color: @JMheaderModuleTitleFontColor;
+	  }
+	}
+	.jm-module + .jm-module {
+		margin-top: 0;
+	}
+	.moduletable {
+	  > h3 {
+	    color: @JMheaderModuleTitleFontColor;
+	  }
+	}
+}
+
+#jm-footer-mod {
+	.jm-module {
+	  .jm-title {
+	    color: @JMfooterModuleTitleFontColor;
+	  }
+	}
+	.moduletable {
+	  > h3 {
+	    color: @JMfooterModuleTitleFontColor;
+	  }
+	}
+}
+
+//color1-ms (green)
+#jm-allpage .jm-module.color1-ms {
+	padding: @JMbaseSpace; 
+	background: @JMmoduleColor1msBackground;
+	margin-bottom: 30px !important;
+	.jm-title {
+		position: relative;
+		margin: 0 0 20px;
+		padding: 0 0 20px;
+		border-bottom: 1px solid @JMmoduleColor1msBorder;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			border-bottom: 1px solid @JMmoduleColor1msBorder;
+			left: 0;
+			right: auto;
+			bottom: 1px;
+		}
+	}
+}
+
+#jm-allpage .color1-ms {
+	color: @JMmoduleColor1msFontColor;
+	.jm-title {
+		color: @JMmoduleTitleColor1msFontColor;
+	}
+	a {
+		color: @JMlinkColor1ms;
+	}
+	.readmore {
+		color: @JMreadmoreColor1msColor;
+		border-color: @JMreadmoreColor1msColor;
+		&:hover {
+			color: @JMreadmoreColor1msColorHover;
+			border-color: @JMreadmoreColor1msColorHover;
+		}
+	}
+	.btn,
+	a.button,
+	input.button,
+	button.button {
+		background: @JMbtnColor1msBackground;
+		color: @JMbtnColor1msFontColor;
+		&:hover {
+			background: @JMbtnColor1msBackgroundHover;
+			color: @JMbtnColor1msFontColorHover;
+		}
+	}
+	ul:not([class]) li {
+		background-image: url("../images/li-white.png");
+	}
+}
+
+//color2-ms (blue)
+#jm-allpage .jm-module.color2-ms {
+	padding: @JMbaseSpace;
+	background: @JMmoduleColor2msBackground;
+	margin-bottom: 30px !important;
+	.jm-title {
+		position: relative;
+		margin: 0 0 20px;
+		padding: 0 0 20px;
+		border-bottom: 1px solid @JMmoduleColor2msBorder;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			border-bottom: 1px solid @JMmoduleColor2msBorder;
+			left: 0;
+			right: auto;
+			bottom: 1px;
+		}
+	}
+}
+
+#jm-allpage .color2-ms {
+	color: @JMmoduleColor2msFontColor;
+	.jm-title {
+		color: @JMmoduleTitleColor2msFontColor;
+	}
+	.readmore {
+		color: @JMreadmoreColor2msColor;
+		border-color: @JMreadmoreColor2msColor;
+		&:hover {
+			color: @JMreadmoreColor2msColorHover;
+			border-color: @JMreadmoreColor2msColorHover;
+		}
+	}
+	.btn,
+	a.button,
+	input.button,
+	button.button {
+		background: @JMbtnColor2msBackground;
+		color: @JMbtnColor2msFontColor;
+		&:hover {
+			background: @JMbtnColor2msBackgroundHover;
+			color: @JMbtnColor2msFontColorHover;
+		}
+	}
+}
+
+// logout topbar
+#jm-top-bar {
+	form {
+		margin: 0;
+	}
+  div.login-greeting,
+  .logout-button {
+    display: inline-block;
+  }
+  .logout-button .btn {
+    font-size: 10px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 15px;
+    vertical-align: top;
+    margin-left: 10px!important;
+    margin-top: 5px;
+  }
+}
+
+// jmmoduleraw
+.jm-module-raw {
+  float: right;
+  margin-left: 15px;
+}
+
+// margin
+.jm-module.margin-ms {
+	margin: 0!important;
+}
+
+.jm-module.side-margin-ms {
+	margin-left: -@JMbaseSpace!important;
+}
+
+//module with class menu
+.jm-module.nav.menu {
+	margin-bottom: @JMbaseSpace;
+}
+
+//hide offcanvas if not enabled
+.toggle-nav.menu {
+	display: none;
+}
+
+// search module
+// --------------------------
+
+.jm-module-raw.search-ms {
+  position: relative;
+}
+
+.search-ms .search {
+  form {
+  	display: block;
+    position: relative;
+    width: 22px;
+    height: 40px;
+    margin: ((@JMmegamenuElementHeight /2) - 30) 0;
+  }
+  input.button,
+  button.button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 20px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+		font-size: 0;
+		background: none;
+		background: url('../images/@{JMimgDir}/search.png') no-repeat center center;
+  }
+  input#mod-search-searchword {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 100%;
+    margin: 0;
+    margin-right: 15px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    width: 0;
+    .transition(all 0.4s linear);
+    padding: 0;
+    border-color: transparent;
+    .box-sizing(border-box);
+    pointer-events: none;
+    z-index: 501;
+		.opacity(0);
+    color: jmlighten(@JMbarFontColor, 10%);
+    background: @JMbarBackground;
+    border-color: transparent;
+    max-width: none;
+    &.show {
+    	padding: 0 10px;
+    	width: @JMsearchWidth;
+    	border-color: @JMstyle;
+    	pointer-events: auto;
+ 			.opacity(100);
+    }
+  }
+}
+
+// contact-ps
+#jm-allpage .contact-ps {
+  h3, 
+  form#contact-form > fieldset > legend,
+  > .contact-address.dl-horizontal {
+    display: none;
+  }
+  > h3:first-child {
+    display: block;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: @JMarticleTitleFontColor;
+    margin: 0;
+  }
+  .form-horizontal .control-label {
+    float: none;
+    width: auto;
+    text-align: inherit;
+    padding: 0;
+    label {
+      margin: 0 0 10px;
+    }
+  }
+  .form-horizontal .controls {
+    margin: 0;
+  }
+  .form-actions {
+    background: none;
+    border: none;
+    padding: 0;
+  }  
+}
+
+// custom html
+// ----------------------------------
+
+// box modules (front left-column)
+// --------------------------
+
+#jm-allpage #jm-page .jm-box {
+	text-align: center;
+	a {
+		display: inline-block;
+		color: inherit;
+		text-decoration: none;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 110px;
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: -@JMbaseSpace;
+			bottom: -@JMbaseSpace;
+			left: -@JMbaseSpace;
+			right: -@JMbaseSpace;
+			background: @white;
+			.opacity(0);
+			.transition(all 0.2s ease-in);
+		}
+	}
+	span {
+		display: block;
+	}
+	.title {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.1;
+		margin: 20px 0 0;
+		color: @JMmoduleTitleFontColor;
+	}
+	.description {
+		padding: 20px 0 0;
+		margin: 20px 0 0;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			right: auto;
+			margin-left: -20px;
+			width: 40px;
+			height: 2px;
+			.transition(all 0.2s ease-in);
+			background: @JMmoduleTitleFontColor;
+		}
+	}
+	a:hover {
+		&:after {
+			.opacity(10);
+		}
+		.description:after {
+			margin: 0;
+			left: 0;
+			right: auto;
+			width: 100%;
+		}
+	}
+}
+
+#jm-allpage #jm-page .color1-ms .jm-box {
+    height: 110px;
+	.title {
+		color: @JMmoduleTitleColor1msFontColor;		
+		&:after {
+		    content: '';
+			position: absolute;
+			top: 123px;
+			left: 50%;
+			right: auto;
+			margin-left: -20px;
+			width: 40px;
+			height: 2px;
+			.transition(all 0.2s ease-in);
+			background: @JMmoduleTitleColor1msFontColor;
+		}
+	}
+	.description:after {
+		background: @JMmoduleTitleColor1msFontColor;
+	}
+}
+
+#jm-allpage #jm-page .color2-ms .jm-box {
+    height: 110px;
+	.title {
+		color: @JMmoduleTitleColor2msFontColor;
+		&:after {
+		    content: '';
+			position: absolute;
+			top: 123px;
+			left: 50%;
+			right: auto;
+			margin-left: -20px;
+			width: 40px;
+			height: 2px;
+			.transition(all 0.2s ease-in);
+			background: @JMmoduleTitleColor2msFontColor;
+		}
+	}
+	.description:after {
+		background: @JMmoduleTitleColor2msFontColor;
+	}
+}
+
+// box-vertical (right-column module)
+// --------------------------
+
+.jm-box-vertical {
+  .jm-panel {
+    display: block;
+    height: 100px;
+    border: 1px solid @JMborder;
+    margin: 0 0 10px;
+    max-width: 400px;
+    .transition(all 0.2s ease-in);
+    background: @JMpageBackground;
+    .jm-icon {
+      float: left;
+      height: 100%;
+      width: 30%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .jm-cell {
+      float: left;
+      height: 100%;
+      width: 70%;
+      text-align: center;
+      padding: 18px;
+      .box-sizing(border-box);
+    }
+    .title {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: @JMcustomBoxVerticalColor;
+      position: relative;
+      padding: 20px 0 0;
+      margin: 13px 0 0;
+      .transition(all 0.2s ease-in);
+      &:after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 100px;
+        left: 50%;
+        right: auto;
+        margin-left: -50px;
+        bottom: 100%;
+        background: @JMcustomBoxVerticalColor;
+        .transition(all 0.2s ease-in);
+      }
+    }
+    .subtitle {
+      display: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.1;
+      color: @JMcustomBoxVerticalColorHover;
+    }
+    &.icon1 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon1.png');
+    }
+    &.icon2 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon2.png');
+    }
+    &.icon3 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon3.png');
+    }
+    &.icon4 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon4.png');
+    }
+  }
+  .jm-panel:hover {
+    border: 1px solid transparent;
+    background: @JMcustomBoxVerticalColor;
+    .title {
+      color: @JMcustomBoxVerticalColorHover;
+      padding: 0 0 15px;
+      margin: 0 0 10px;
+      &:after {
+        bottom: 0;
+        background: @JMcustomBoxVerticalColorHover;
+      }
+    }
+    .subtitle {
+      display: block;
+    }
+    &.icon1 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon1-hover.png');
+    }
+    &.icon2 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon2-hover.png');
+    }
+    &.icon3 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon3-hover.png');
+    }
+    &.icon4 .jm-icon {
+      background-image: url('../../../images/modules/icons/trust/icon4-hover.png');
+    }
+  }
+}
+
+// social icons
+// --------------------------
+
+.jm-icons {
+  a {
+    display: inline-block;
+    text-decoration: none!important;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0;
+    .transition(all 0.3s ease-in-out);
+    .opacity(70);
+  }
+  a:hover {
+    .opacity(100);
+  }
+  a.jm-facebook {
+    background: url('../images/social/facebook-dark.png');
+  }
+  a.jm-link {
+    background: url('../images/social/link-dark.png');
+  }
+  a.jm-skype {
+    background: url('../images/social/skype-dark.png');
+  }
+  a.jm-twitter {
+    background: url('../images/social/twitter-dark.png');
+  }
+  a.jm-google {
+    background: url('../images/social/google-dark.png');
+  }
+}
+
+//dark background
+.color-ms,
+#jm-offcanvas,
+#jm-footer {
+	.jm-icons {
+	  a.jm-facebook {
+	    background: url('../images/social/facebook.png');
+	  }
+	  a.jm-link {
+	    background: url('../images/social/link.png');
+	  }
+	  a.jm-skype {
+	    background: url('../images/social/skype.png');
+	  }
+	  a.jm-twitter {
+	    background: url('../images/social/twitter.png');
+	  }
+	  a.jm-google {
+	    background: url('../images/social/google.png');
+	  }
+	}
+}
+
+// box-bottom
+// --------------------------
+
+.jm-bottom-box {
+	margin: @JMbaseSpace 0;
+  display: block;
+  .icon {
+    display: inline-block;
+    padding: 0 20px 0 0;
+    vertical-align: top;
+    .transition(all 0.3s ease-in-out);
+    top: 0;
+    &:hover {
+      top: -5px;
+      position: relative;
+    }
+  }
+  .content {
+    display: inline-block;
+    span {
+      display: block;
+      font-weight: 400;
+    }
+    .title {
+      text-transform: uppercase;
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
+    .desc {
+      font-size: 14px;
+      color: @JMcustomBoxBottomFontColor;
+    }
+  }
+}
+.jm-bottom-box-custom {
+    .jm-bottom-box;
+    margin-top: 21px;
+}
+
+// table pricing
+// --------------------------
+
+#jm-allpage table.pricing {
+  float: left;
+  margin: 0 0 @JMbaseSpace;
+  td.price {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: @JMstyle;
+    vertical-align: middle;
+  }
+}
+
+// promo
+// --------------------------
+
+.jm-promo {
+	text-align: center;
+	a {
+		text-decoration: none;
+	}
+	p {
+		margin: 0;
+	}
+	img {
+		display: block;
+		margin: 30px auto 20px;
+	}
+	span.title {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: @JMmegamenuModuleTitle;
+		padding: 0 0 20px;
+		margin: 0 0 15px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			right: auto;
+			margin-left: -20px;
+			width: 40px;
+			height: 2px;
+			background: @JMmegamenuModuleTitle;
+		}
+		&:hover {
+			color: @JMstyle;
+		}
+	}
+}

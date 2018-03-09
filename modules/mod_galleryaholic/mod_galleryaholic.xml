@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+<name>GalleryAholic</name>
+<creationDate>May 2013</creationDate>
+<version>1.6.4-PRO</version>
+<author>GraphicAholic</author>
+<copyright>Copyright 2012-2018 - graphicaholic.com</copyright>
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+<authorEmail>support@graphicaholic.com</authorEmail>
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>
+	<description>
+	<![CDATA[
+		GalleryAholic is a jQuery plugin for creating a dynamic grid layout. It manages to convert HTML elements into 'blocks' and position them in a well-arranged grid layout like <a href="https://www.pinterest.com/">Pinterest®</a> or in a 'no box' layout like the <a href="http://windows.microsoft.com/en-us/windows-8/meet">Windows® 8</a> format.<p>&nbsp;</p><p style="line-height:180%;font-size:1.2em"><a href="http://www.graphicaholic.com"><img src="../modules/mod_galleryaholic/images/GalleryAholicHeader.jpg" alt="GalleryAholic" style="float:left;margin:0 20px 20px 0px;padding:4px;border:1px solid #ddd"/></a><br style="clear:both" /></p><p  style="color:#555">The module features the following photo gallery selections and layouts:</p>
+		<ul style="color:#777">
+			<li>Joomla Folder Plus Gallery</li>
+			<li>Joomla Category Gallery</li>
+			<li>Flickr Photoset Gallery</li>
+			<li>Google+ Album Gallery</li>
+			<li>Instagram Username Gallery</li>
+			<li>Lightbox option with photo download feature</li>
+			<li>Personalized styling options</li>
+			<li>Customize how your gallery will look when viewed from a monitor, tablet or smartphone device</li>
+		</ul>
+		<div style="color:#555">
+			<p>You can use this module to display your photos in a customizable responsive, mobile ready layout.</p>
+			<p>Please read the documentation contained within the module setting tooltips or go to the <a href="http://graphicaholic.com/demos">GraphicAholic</a> page and download the PDF documentation file.</p>
+			<p>Version: 1.6.4-PRO</p>
+		</div>
+	]]>
+	</description>
+	<files>
+		<filename module="mod_galleryaholic">mod_galleryaholic.php</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+        <folder>font</folder>
+        <folder>tmpl</folder>
+        <folder>fields</folder>	
+        <folder>helpers</folder>
+        <folder>images</folder>
+		<filename>index.html</filename>
+		<filename>mod_galleryaholic.xml</filename>
+		<filename>helper.php</filename>
+	</files>	
+		<updateservers>
+		<server type="extension" priority="1" name="GalleryAholic Update">http://www.graphicaholic.com/downloads/GalleryAholic/galleryaholic.xml</server>
+		</updateservers>
+	<params addpath="">
+		</params>
+	<config>    
+	<fields name="params" addfieldpath="/modules/mod_galleryaholic/fields">	
+	
+	<fieldset name="gallerysettings" group="gallerysettings" label="Gallery Settings">	
+	<!-- Joomla Folder Plus Settings -->	
+	<field name="jfolderSetting" showon="imageFeed:6" type="gaspacer" label="Joomla Folder Plus Gallery Settings" style="title" />	
+			<field name="thumbnail_mode" type="hidden" default="none" class="btn-group" label="Image Mode" description="For GalleryAholic it is strongly suggested that you use the 'Default' option. The Resize and Crop options are used with other extensions using this framework.">
+					<option value="none">Default</option>
+					<option value="resize">Resize</option>
+					<option value="crop">Crop</option>
+				</field>
+				<field name="image_width" type="hidden" default="100" label="Image Width" description="Set the image width" />
+				<field name="image_height" type="hidden" default="100" label="Image Height" description="Set the image height" />
+				<field name="data_source" showon="imageFeed:6" type="gaimagefolder" directory="images" label="Image path folder" description="Relative to Joomla images folder. Default relative path is 'YOUR/JOOMLA/SITE/PATH/IMAGES'." />	
+	<!-- Flickr Photoset Settings -->
+	<field name="flickrSetting" showon="imageFeed:2" type="gaspacer" label="Flickr Gallery Settings" style="title" />	
+	<field name="flickrAPI" showon="imageFeed:2" type="text" default="d90e841af64dd771e24303ca493c4f74" label="Flickr API" description="Enter your specific Flickr API code" />
+	<field name="flickrCache" showon="imageFeed:2" type="radio" class="btn-group" default="0" label="Use Flickr Cache?" description="Select to use Flickr cache. RECOMMENDED! ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="flickrSet" showon="imageFeed:2" type="text" default="" label="Flickr Photoset ID" description="Enter your Flickr Photoset ID. This will be a 17 digit number found in your Photoset URL." />
+	<field name="flickrThumb" showon="imageFeed:2" type="list" default="small" label="Thumbnail Size" description="Select what photo size to use for your Flickr thumbnails.">	
+			<option value="1">Small</option>
+			<option value="2">Medium</option>
+			<option value="3">Large</option>
+	</field>
+	<field name="flickrTitle" showon="imageFeed:2" type="radio" class="btn-group" default="1" label="Show Flickr Photo Title?" description="Select to show Flickr photo titles. ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="flickrDesc" showon="imageFeed:2" type="radio" class="btn-group" default="1" label="Show Flickr Description?" description="Select to show Flickr photo titles. ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="flickrTag" showon="imageFeed:2" type="text" filter="raw" default="" label="Global bottom right tag" description="Supports basic HTML tags." />
+	<!-- Picasa Album Settings -->
+	<field name="googleSetting" showon="imageFeed:3" type="gaspacer" label="Google+ Gallery Settings" style="title" />	
+	<field name="picasaUser" showon="imageFeed:3" type="text" default="" label="Google+ User Name/Number" description="Enter your Picasa User Name or User ID number" />
+	<field name="user_albumid" showon="imageFeed:3" type="text" default="" label="Google+ Album Number" description="Enter the Picasa Album Number you wish to display" />
+	<field name="albumTitle" showon="imageFeed:3" type="text" default="" label="Google+ Album Title" description="Enter your Picasa Album title. This option is strickly a housekeeping feature to help you remember what Picasa Album you are using." />
+	<field name="photoSize" showon="imageFeed:3" type="text" default="240" label="Photo size to display" description="This setting is global to the photo you display and the photo that shows in the lightbox. Set this large enough but not to large!" />
+	<field name="picasaPhoto" showon="imageFeed:3" type="list" default="u" label="Photo Size" description="Select what photo orientation to use for your Picasa Album.">	
+			<option value="u">Full Size</option>
+			<option value="c">Cropped</option>
+	</field>
+	<field name="picasaTitle" showon="imageFeed:3" type="radio" class="btn-group" default="1" label="Show Google+ Photo Title?" description="Select to show Picasa photo titles. ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="picasaDesc" showon="imageFeed:3" type="radio" class="btn-group" default="1" label="Show Google+ Description?" description="Select to show Picasa photo descriptions. ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="picasaTag" showon="imageFeed:3" type="text" filter="raw" default="" label="Global bottom right tag" description="Supports basic HTML tags." />	
+	<!-- Instagram Settings -->
+	<field name="instagramSetting" showon="imageFeed:7" type="gaspacer" label="Instagram Gallery Settings" style="title" />		
+	<field name="note41" showon="imageFeed:7" type="note" class="alert" label="Getting your Instagram Access Token" description="To get your Instagram API Access Token, use this Instagram access token generator link, http://instagram.pixelunion.net/" />	
+	<field name="accessToken" showon="imageFeed:7" type="text" default="" label="Instagram Access Token" description="Follow link above to obtain your Access Token." />
+	<field name="resoultion" showon="imageFeed:7" type="list" default="1" label="Image resolution" description="Image resoultion? If choosing 'Squared resolution' the largest image size is 150px x 150px. This is Instagram's latest API restriction.">
+			<option value="0">Squared resolution</option>	
+			<option value="1">Standard resolution</option>
+		</field>
+	<field name="instagramLightbox" showon="imageFeed:7" type="list" default="0" label="Show Instagram post in" description="Select to show the Instagram posting in a new window or lightbox. If choosing lightbox make sure to change 'Use Lightbox feature' to Yes under the Lightbox Settings tab.">	
+			<option value="0">New Window</option>	
+			<option value="1">Lightbox</option>
+	</field>
+	<field name="postCount" showon="imageFeed:7" type="text" default="10" label="Posts on page load?" description="Enter how many Instagram posts to show on page load." />
+	<field name="instagramDate" showon="imageFeed:7" type="radio" class="btn-group" default="1" label="Show Instagram posted date?" description="Select to show the Instagram posting date? ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="dateSuffix" type="text" showon="imageFeed:7[AND]instagramDate:1" default="" label="Text before date" description="Type in the text you want to show just before the posted date." />
+	<field name="instagramDesc" showon="imageFeed:7" type="radio" class="btn-group" default="1" label="Show Text?" description="Select to show Instagram photo text and hashtags. ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="instagramMeta" showon="imageFeed:7" type="radio" class="btn-group" default="1" label="Show Likes-Comments icons?" description="Select to show the Instagram likes and comments totals and icons? ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>	
+	<field name="instagramiconColor" type="truecolors" showon="imageFeed:7[AND]instagramMeta:1" default="" format="rgb" opacity="1.0" label="Instagram icons color" description="Select icons color." />
+	<field name="iconfontSize" type="text" showon="imageFeed:7[AND]instagramMeta:1" default="11px" label="Icon font sizes" description="Type in icon font sizes. Please note: Make sure to include px after value." />
+	<!-- Joomla Category Settings -->	
+	<field name="jcategorySetting" showon="imageFeed:5" type="gaspacer" label="Joomla Category Gallery Settings" style="title" />	
+	<field name="note21" showon="imageFeed:5" type="note" class="alert" label="Housekeeping note" description="The 'Check to use' option below is strickly a housekeeping option. Unchecking this option will disable module features." />	
+	<field name="imgf_cfg" addfieldpath="/modules/mod_galleryaholic/helpers/fields" showon="imageFeed:5" type="imagesrc" default="imgf_inline_introtext" label="Check to use" description="Make sure this option is Checked">
+			<option value="imgf_inline_introtext">options below.</option>
+	</field>
+	<field name="imgf_placeholder" showon="imageFeed:5" label="Placeholder image" class="btn-group" description="The Default Image. Applied if category article has no image" type="radio" default="1">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+	</field>
+	<field name="imgf_placeholder_path" showon="imageFeed:5[AND]imgf_placeholder:1" type="text" default="modules/mod_galleryaholic/images/no_photo.jpg" label="Placeholder Path (or Url)" description="The Path (or URL) of Default Image" />	
+	<field name="catid" showon="imageFeed:5" type="category" extension="com_content" multiple="true" class="multipleCategories" size="10" default="" label="Select Category(s)" description="Click inside option box to select category or categories to render photos from." />
+	
+	<field name="show_child_category_articles" showon="imageFeed:5" type="radio" class="btn-group" default="0" label="Child Category Articles" description="Include or Exclude Articles from Child Categories.">
+			<option value="1">Include</option>
+			<option value="0">Exclude
+			</option>
+	</field>  
+	<field name="levels" showon="imageFeed:5" type="text" default="1" label="Category Depth" description="The number of child category levels to return." />	
+	<field name="tag" type="tag" showon="imageFeed:5" label="Select Tag(s)" description="Select assigned content tags to display just those tagged photos within the category or categories selected above." mode="nested" multiple="true" class="multipleTags" />	
+	<field name="show_front" showon="imageFeed:5" type="list" default="show" class="btn-group" label="Featured Articles" description="Select to Show, Hide, or Only display Featured Articles.">
+			<option value="show">Show</option>
+			<option value="hide">Hide</option>
+			<option value="only">Only</option>
+	</field>
+	<field name="catFeatured"  showon="show_front:show,only[AND]imageFeed:5" type="list" default="1" label="Featured grid width" description="If article is Featured, how many grid boxes wide should it consume?">
+			<option value="1">1 Grid Wide</option>
+			<option value="2">2 Grid Wide</option>
+			<option value="3">3 Grid Wide</option>
+			<option value="4">4 Grid Wide</option>
+			<option value="5">5 Grid Wide</option>
+			<option value="6">6 Grid Wide</option>
+			<option value="7">7 Grid Wide</option>
+			<option value="8">8 Grid Wide</option>
+	</field>
+	<field name="info1" showon="imageFeed:5" type="info" default="You can customize each photo's grid size beyond the above options. When editoring an article, click onto the 'Publishing' top tab. In the 'Created by alias' enter a value greater then the number 1. For example, entering the number 4 will span your photo across four grids. If your overall grid setting is five, this will allow a photo to span across four of the five grids. Really... cool!" />
+	<field name="article_ordering" showon="imageFeed:5" type="list" default="a.title" label="Article Field to Order By" description="Select which field you would like Articles to be ordered by. Featured Ordering should only be used when Filtering Option for Featured Articles is set to 'Only'.">
+			<option value="a.ordering">Article Manager Order</option>
+			<option value="fp.ordering">Featured Articles Order</option>
+			<option value="a.hits">Hits</option>
+			<option value="a.title">Title</option>
+			<option value="a.id">ID</option>
+			<option value="a.alias">Alias</option>
+			<option value="a.created">Created Date</option>
+			<option value="modified">Modified Date</option>
+			<option value="publish_up">Start Publishing Date</option>
+			<option value="a.publish_down">Finish Publishing Date</option>
+	</field>
+	<field name="article_ordering_direction" showon="imageFeed:5" type="list" default="ASC" label="Ordering Direction" description="Select the direction you would like Articles to be ordered by.">
+			<option value="DESC">Descending</option>
+			<option value="ASC">Ascending</option>
+	</field>
+	<field name="count" showon="imageFeed:5" type="text" default="12" label="Count" description="The number of articles to display. The default value of 0 will display all articles." />
+	<field name="title_display" showon="imageFeed:5" type="radio" default="1" class="btn-group" label="Display article titles" description="Display article titles">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+	</field>	
+	<field name="item_title_maxlength" showon="imageFeed:5[AND]title_display:1" type="text" default="25" label="Title Maxlength" description="Maxlength of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+	<field name="item_desc_display" showon="imageFeed:5" type="radio" filter="raw" default="1" class="btn-group" label="Description display" description="Display description of item">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+	</field>
+	<field name="item_desc_maxlength" showon="imageFeed:5[AND]item_desc_display:1" type="text" default="200" label="Description Maxlength" description="Maxlength of description by characters. Enter value 0 if you want to show entire introtext. Please enter integer number >= 0." />
+	<field name="metaTag" showon="imageFeed:5" type="list" default="1" class="btn-group" label="Bottom tag option" description="">
+			<option value="0">None</option>
+			<option value="1">Custom bottom tag</option>
+			<option value="2">Category author article tag</option>
+	</field>	
+	<field name="jCategoryTag" showon="metaTag:1[AND]imageFeed:5" type="textarea" filter="raw" cols="35" rows="4" default="" label="Custom bottom right tag" description="GLOBAL Basic HTML code allowed" />
+	<field name="prefixTag" showon="metaTag:2[AND]imageFeed:5" type="text" filter="raw" cols="35" rows="4" default="" label="Category prefix tag" description="Text to show before category Author name" />
+	<field name="item_readmore_display" showon="imageFeed:5" class="btn-group" type="radio" default="1" label="Display Read More" description="Allow show/hide Read More Link">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+	</field>
+	</fieldset>	
+	<fieldset name="globalstyling" group="globalstyling" label="Global Styling">	
+	<field name="matrixSetting" type="gaspacer" label="Display Matrix Settings" style="title" />
+	<field name="numberCol" type="text" default="3" label="Number of Columns" description="Enter number of columns you want to desktop-laytop display across the screen." />
+	<field name="smallCol" type="text" default="2" label="Small mobile columns" description="Enter number of columns you want to mobile display across the screen." />
+	<field name="medCol" type="text" default="3" label="Medium mobile columns" description="Enter number of columns you want to small tablet display across the screen." />
+	<field name="largeCol" type="text" default="4" label="Large mobile columns" description="Enter number of columns you want to large tablet display across the screen." />
+	<field name="LRoffset" type="text" default="8" label="Left/Right Offset" description="Left-Right margin offset between columns" />
+	<field name="TBoffset" type="text" default="8" label="Top/Bottom Offset" description="Top-Bottom margin offset between rows" />
+	<field name="topMargin" type="text" default="0px" label="Top module margin" description="Requires PX after value. i.e. 100px" />	
+	<field name="bottomMargin" type="text" default="0px" label="Bottom module margin" description="Requires PX after value. i.e. 100px" />	
+	<field name="breakpointSettings" type="gaspacer" label="Media Breakpoint Options" style="title" />	
+	<field name="breakpointSmall" type="text" default="460" label="Small screen breakpoint" description="Small screens breakpoint. Screen resolution for small screen hand-held devices and smartphones. DO NOT include 'PX' after value." />
+	<field name="breakpointMed" type="text" default="660" label="Medium screen breakpoint" description="Medium screens breakpoint. Screen resolution for medium screen hand-held devices and smartphones. DO NOT include 'PX' after value." />
+	<field name="breakpointLarge" type="text" default="1100" label="Large screen breakpoint" description="Large screens breakpoint. Screen resolution for large screen hand-held devices and smartphones. DO NOT include 'PX' after value." />
+	<field name="styleSetting" type="gaspacer" label="Display Style Settings" style="title" />
+	<field name="gridLayout" type="list" default="1" label="Grid Styling" description="Choose your grid layout. ">	
+			<option value="1">Standard Box Layout</option>	
+			<option value="2">Basic No Box Layout</option>
+	</field>	
+	<field name="grid_Color" type="truecolors" showon="gridLayout:1" default="rgb(255,255,255,1)" label="Grid background color" format="rgb" opacity="1.0" description="Select background box color." />
+	<field name="titleColor" type="truecolors" showon="imageFeed:2,3,5,6" default="rgb(119,119,119,1)" label="Title color" format="rgb" opacity="1.0" description="Select title color" />
+	<field name="fontSize" type="text" showon="imageFeed:2,3,5,6" default="17px" label="Title font size" description="Type in title font size. NOTE: Must include the px after your value. " />
+	<field name="titleWeight" type="list" showon="imageFeed:2,3,5,6" default="bold" label="Title font weight **" description="Select to your specific needs.">	
+			<option value="normal">Normal</option>	
+			<option value="bold">Bold</option>	
+	</field>
+	<field name="descColor" type="truecolors" default="rgb(119,119,119,1)" label="Description color" format="rgb" opacity="1.0" description="Select description text color" />
+	<field name="descfontSize" type="text" default="11px" label="Description font size" description="Type in description font size. NOTE: Must include the px after your value. " />
+	<field name="descWeight" type="list" default="normal" label="Description font weight **" description="Select to your specific needs.">	
+			<option value="normal">Normal</option>	
+			<option value="bold">Bold</option>	
+	</field>
+	<field name="metaColor" type="truecolors" showon="imageFeed:2,3,5,6" default="rgb(119,119,119,1)" label="Tag color" format="rgb" opacity="1.0" description="Select bottom tag text color." />
+	<field name="metafontSize" type="text" showon="imageFeed:2,3,5,6" default="11px" label="Tag font size" description="Type in tag font size. NOTE: Must include the px after your value." />
+	<field name="metaWeight" type="list" showon="imageFeed:2,3,5,6" default="normal" label="Tag font weight **" description="Select to your specific needs.">	
+			<option value="normal">Normal</option>	
+			<option value="bold">Bold</option>	
+	</field>
+	<field name="metaPosition" type="list" showon="imageFeed:2,3,5,6" default="left" label="Tag Position" description="Select how to position the bottom tag.">	
+			<option value="left">Left</option>	
+			<option value="right">Right</option>
+			<option value="center">Center</option>
+	</field>
+	<field name="overlayEffect" showon="lightbox:1" type="truecolors" default="" label="Overlay background tint" format="rgb" opacity="1.0" description="Select hover background overlay tint." />
+	<field name="grayStyle" type="gaspacer" label="Grayscale Option" style="title" />
+	<field name="imgGrayscale" type="radio" class="btn-group" default="0" label="Grayscale photo effect" description="Grayscale effect your photos?">	
+			<option value="0">JNO</option>	
+			<option value="1">JYES</option>
+	</field>	
+	<field name="specialEffects" type="gaspacer" label="Special Effects" style="title" />
+	<field name="specialFX" type="radio" class="btn-group" default="0" label="Use special effects" description="Special effect your photos?">	
+			<option value="0">JNO</option>	
+			<option value="1">JYES</option>
+	</field>
+	<field name="effectOption" showon="specialFX:1" type="list" default="fadeIn" label="Choose special effect" description="Choose special effect option.">
+			<option value="fadeIn">Fade In</option>
+			<option value="fadeInDown">Fade In Down</option>
+			<option value="fadeInLeft">Fade In Left</option>
+			<option value="fadeInRight">Fade In Right</option>
+			<option value="pulse">Pulse</option>
+			<option value="shake">Shake</option>
+			<option value="wobble">Wobble</option>
+			<option value="bounceIn">Bounce In</option>	
+			<option value="flipInX">Flip In X</option>
+			<option value="flipInY">Flip In Y</option>
+			<option value="rotateIn">Rotate In</option>
+			<option value="rollIn">Roll In</option>
+			<option value="zoomIn">Zoom In</option>	
+			<option value="zoomInDown">Zoom In Down</option>
+			<option value="slideInDown">Slide In Down</option>
+	</field>	
+	<field name="repeatFX" showon="specialFX:1" type="list" default="false" label="Repeat special effects" description="Repeat special effects on page scroll?">	
+			<option value="true">JNO</option>	
+			<option value="false">JYES</option>
+	</field>
+	<field name="dataDuration" showon="specialFX:1" type="text" default="1.0s" label="Static image time" description="Amount of time in seconds to show image on page scroll. Adjust as needed. There MUST be a lowercase 's' after this value." />
+	<field name="dataDelay" showon="specialFX:1" type="text" default="0.1s" label="Delay image time" description="Amount of time in seconds to delay image on page load. Adjust as needed. There MUST be a lowercase 's' after this value." />	
+	<field name="dataOffset" showon="specialFX:1" type="text" default="100" label="Delay offset" description="Adjust to display more or less images on page load. Negitave values are supported. Some PRO templates will require you to adjustment this setting." />	
+	</fieldset>	
+	<!-- General Settings -->		
+	<fieldset name="basic">	
+	<field name="renderSetting" type="gaspacer" label="Rendered Gallery Selection" style="title" />
+	<field name="imageFeed" type="list" default="6" label="Create gallery from?" description="Choose option. You can not mix-and-match where you get your galleries. ">
+			<option value="6">Joomla Folder Plus</option>
+			<option value="5">Joomla Category</option>
+			<option value="2">Flickr Photosets</option>
+			<option value="3">Google+ Gallery</option>
+			<option value="7">Instagram Gallery</option>
+	</field>	
+	</fieldset>
+	<fieldset name="lightbox" group="lightbox" label="Lightbox Settings">
+	<field name="lightboxSetting" type="gaspacer" label="Lightbox Settings" style="title" />
+	<field name="lightbox" type="list" class="btn-group" default="0" label="Use Lightbox feature" description="Option to use the Fancybox3 lightbox feature when a photo is clicked.">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="fancyboxTextPosition" showon="imageFeed:6,5,3,2[AND]lightbox:1" type="list" default="center" label="Lightbox text position **" description="Select to your specific needs.">	
+			<option value="left">Left</option>	
+			<option value="right">Right</option>
+			<option value="center">Center</option>
+	</field>
+	<field name="fancyboxTextOverlay" type="truecolors" default="rgb(255,255,255,0.75)" label="Text overlay color **" format="rgb" opacity="1.0" description="Select lightbox text overlay color" />
+	<field name="fancyboxTitle" showon="imageFeed:6,5,3,2[AND]lightbox:1" type="list" class="btn-group" default="nodata-" label="Show title in lightbox?" description="Select to your specific needs.">
+			<option value="nodata-">No</option>	
+			<option value="data-">Yes</option>
+	</field>
+    <field name="fancyboxDescription" showon="imageFeed:6,3[AND]lightbox:1" type="list" default="0" label="Show description in lightbox?" description="Select to your specific needs.">
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="lightboxCounter" showon="lightbox:1" type="list" class="btn-group" default="inline-block" label="Show Lightbox counter" description="Option to display lightbox counter.">	
+			<option value="none">No</option>	
+			<option value="inline-block">Yes</option>
+	</field>
+	<field name="lightboxButtons" showon="lightbox:1" type="list" class="btn-group" default="true" label="Show Lightbox buttons" description="Option to display lightbox buttons.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxButtonsSlideshow" showon="lightbox:1" type="list" class="btn-group" default="true" label="Show slideshow button" description="Option to display slideshow button.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxButtonsSpeed" showon="lightbox:1" type="text" default="330" label="Slideshow speed in MS" description="Adjust slideshow speed to your needs. Higher value=Faster scrolling speed." />
+	<field name="lightboxButtonsLoop" showon="lightbox:1" type="list" default="true" label="Loop slideshow" description="Option to loop slideshow images.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxButtonsFullScreen" showon="lightbox:1" type="list" default="true" label="Show full screen button" description="Option to display full screen button.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxButtonsThumbs" showon="lightbox:1" type="list" default="true" label="Show thumbnail button" description="Option to display thumbnail button.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxButtonsClose" showon="lightbox:1" type="list" default="true" label="Show close X button" description="Option to display close lightbox X button.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxKeyboard" showon="lightbox:1" type="list" default="true" label="Keyboard navigation" description="Option to allow keyboard navigation.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>
+	<field name="lightboxTouch" showon="lightbox:1" type="list" default="true" label="Touch&#47;Drag navigation" description="Option to allow touch and drag navigation.">	
+			<option value="false">No</option>	
+			<option value="true">Yes</option>
+	</field>	
+	<field name="lightboxOverlay" showon="lightbox:1" type="truecolors" default="" label="Lightbox background tint" format="rgb" opacity="1.0" description="Select lightbox background tint." />
+	<field type="spacer" showon="lightbox:0" name="lightboxScripts" class="text" label="If you are not using the Lightbox feature set the next option below to No." />
+	<field name="lightboxScript" type="list" class="btn-group" default="1" label="Load lightbox script?" description="If you are using another extension that uses the Fancybox lightbox, you may need to set this option to No.">
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>		
+	</fieldset>	
+	<!-- Advanced Settings -->
+	<fieldset name="advanced" group="advanced" label="Advanced Settings">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" showon="cache:1" type="text" default="900" label="Cache Time" description="The time before the module is recached" />	
+				<field name="customCSS" type="radio" class="btn-group" default="0" label="Add custom CSS?" description="Select Yes to add custom CSS into GalleryAholic.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="cssData" showon="customCSS:1" type="textarea" filter="raw" default="" label="Custom CSS inline code" description="Do not include the style tags. Just your required custom CSS code." class="span4" rows="20" />
+	</fieldset>	
+</fields>
+</config>
+</extension>

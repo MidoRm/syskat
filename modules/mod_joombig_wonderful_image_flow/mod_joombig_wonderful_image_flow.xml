@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>joombig wonderful image flow</name>
+  <author>joombig.com</author>
+  <creationDate>April 2014</creationDate>
+  <copyright>Copyright (C) 2014 joombig.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@joombig.com</authorEmail>
+  <authorUrl>www.joombig.com</authorUrl>
+  <version>1.1</version>
+  <description>MODULE_DESC</description>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_joombig_wonderful_image_flow.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_joombig_wonderful_image_flow">mod_joombig_wonderful_image_flow.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl/</folder>
+    <folder>fields/</folder>
+    <folder>helpers/</folder>
+    <folder>language/</folder>
+    <folder>assets/</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/modules/mod_joombig_wonderful_image_flow/fields">
+        <field type="assets" url="/modules/mod_joombig_wonderful_image_flow/assets" />
+        <field type="tmpl" name="sp_style" default="Wonderfulimageflow"  label="STYLE" description="STYLE_DESC" />
+		<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+			<option value="1">Enable</option>
+			<option value="0">Disable</option>
+		</field>
+		<field name="width_module" type="text" default="930" label="Width of Module" description="Width without px" />
+		<field name="height_module" type="text" default="360" label="Height of Module" description="Height without px" />
+		<field name="width_image" type="text" default="400" label="Width of Image" description="Height without px" />
+		<field name="height_image" type="text" default="330" label="Height of Image" description="Height without px" />
+		<field name="top_module" type="text" default="150" label="Top of module" description="MarginTop without px" />
+      </fieldset>
+      <fieldset name="sliders" description="Setting for all item,Click Add New(require fill title)" label="Setting Item">
+        <field type="sliders" name="sliders" />
+      </fieldset>
+	  <fieldset name="animation">
+        <field type="animation" name="animation" />
+		<field type="loader" />
+      </fieldset>
+      <fieldset name="responsive_setting" label="Responsive setting">
+		<field name="screen_width1" type="text" default="" label="Screen width1" description="Width without px" />
+		<field name="width_module1" type="text" default="" label="Width1 of Module" description="Width without px" />
+		<field name="height_module1" type="text" default="" label="Height1 of Module" description="Height without px" />
+		<field name="width_image1" type="text" default="" label="Width1 of Image" description="Width without px" />
+		<field name="height_image1" type="text" default="" label="Height1 of Image" description="Height without px" />
+		
+		<field name="screen_width2" type="text" default="" label="Screen width2" description="Width without px" />
+		<field name="width_module2" type="text" default="" label="Width2 of Module" description="Width without px" />
+		<field name="height_module2" type="text" default="" label="Height2 of Module" description="Height without px" />
+		<field name="width_image2" type="text" default="" label="Width2 of Image" description="Width without px" />
+		<field name="height_image2" type="text" default="" label="Height2 of Image" description="Height without px" />
+		
+		<field name="screen_width3" type="text" default="" label="Screen width3" description="Width without px" />
+		<field name="width_module3" type="text" default="" label="Width3 of Module" description="Width without px" />
+		<field name="height_module3" type="text" default="" label="Height3 of Module" description="Height without px" />
+		<field name="width_image3" type="text" default="" label="Width3 of Image" description="Width without px" />
+		<field name="height_image3" type="text" default="" label="Height3 of Image" description="Height without px" />
+		
+		<field name="screen_width4" type="text" default="" label="Screen width4" description="Width without px" />
+		<field name="width_module4" type="text" default="" label="Width4 of Module" description="Width without px" />
+		<field name="height_module4" type="text" default="" label="Height4 of Module" description="Height without px" />
+		<field name="width_image4" type="text" default="" label="Width4 of Image" description="Width without px" />
+		<field name="height_image4" type="text" default="" label="Height4 of Image" description="Height without px" />
+		
+		<field name="screen_width5" type="text" default="" label="Screen width5" description="Width without px" />
+		<field name="width_module5" type="text" default="" label="Width5 of Module" description="Width without px" />
+		<field name="height_module5" type="text" default="" label="Height5 of Module" description="Height without px" />
+		<field name="width_image5" type="text" default="" label="Width5 of Image" description="Width without px" />
+		<field name="height_image5" type="text" default="" label="Height5 of Image" description="Height without px" />
+      </fieldset>
+      <fieldset name="advanced">	  
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		<field name="module_cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+		<option value="1">JGLOBAL_USE_GLOBAL</option>
+		<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		<field name="cache" type="hidden" default="1" />
+		<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+		<field name="cachemode" type="hidden" default="itemid">
+			<option value="itemid"></option>
+		</field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

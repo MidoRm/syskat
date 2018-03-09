@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.1" type="package" method="upgrade">
+	<name>PKG_IMAGEFROMARTICLE</name>
+	<author>Olivier Buisard</author>
+	<creationDate>01/25/2017</creationDate>
+	<packagename>imagefromarticle</packagename>
+	<copyright>Copyright (C) 2011 Simplify Your Web. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<url>http://www.simplifyyourweb.com/</url>
+	<packager>Olivier Buisard</packager>
+ 	<packagerurl>http://www.simplifyyourweb.com/</packagerurl>
+	<version>1.3.1</version>
+	<description>PKG_IMAGEFROMARTICLE_XML_DESCRIPTION</description> 
+	<scriptfile>installer.php</scriptfile>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.pkg_imagefromarticle.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.pkg_imagefromarticle.sys.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.pkg_imagefromarticle.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.pkg_imagefromarticle.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.pkg_imagefromarticle.sys.ini</language>
+	</languages>
+ 	<files folder="packages">
+		<file type="plugin" id="imagefromarticle" group="content">plg_content_imagefromarticle.zip</file>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="Image from Article auto updater">http://www.barejoomlatemplates.com/autoupdates/imagefromarticle/imagefromarticle-pkg-update.xml</server>
+	</updateservers>
+</extension>

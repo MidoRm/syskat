@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension type="package" version="3.0" method="upgrade">
+ <name>Huge-IT Gallery</name>
+<creationDate>January 2015</creationDate>
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<copyright>Copyright (C) 2013 Huge-IT.com 2013. All rights reserved.</copyright> 
+<author>Huge-IT</author>
+<authorEmail>info@huge-it.com</authorEmail> 
+<authorUrl>http://www.huge-it.com</authorUrl>
+<version>1.1.9</version> 
+<packagename>gallery</packagename>
+<packager>Huge-IT</packager>
+ <files>
+	<file type="plugin" id="gallery" group="system">plg_gallery.zip</file>
+	<file type="module" id="mod_gallery" client="site">mod_gallery.zip</file>
+	<file type="component" id="com_gallery">com_gallery.zip</file>	
+ </files>
+ </extension>

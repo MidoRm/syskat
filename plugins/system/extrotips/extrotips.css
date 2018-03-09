@@ -1,0 +1,133 @@
+.tooltips { position: relative; display: inline-block; text-decoration: none; outline: none; }
+
+.tooltips span {
+  visibility: hidden;
+  position: absolute; 
+  left: 50%;
+  z-index: 999;
+  padding: 10px;
+  border: 2px solid #ccc;
+  opacity: 0;
+  background-color: #ddd;                     
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));  
+  -moz-border-radius: 4px;
+  border-radius: 4px;  
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;  
+  text-shadow: 0 1px 0 rgba(255,255,255,.4); 
+
+  -webkit-transition-property:opacity, margin-top, visibility, margin-left;
+  -webkit-transition-duration:0.5s, 0.3s, 0.5s, 0.3s;  
+  -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+
+  -moz-transition-property:opacity, margin-top, visibility, margin-left;
+  -moz-transition-duration:0.4s, 0.4s, 0.4s, 0.4s;  
+  -moz-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;		
+
+  -o-transition-property:opacity, margin-top, margin-left;
+  -o-transition-duration:0.5s, 0.3s, 0.3s;  
+  -o-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+
+  transition-property:opacity, margin-top, visibility, margin-left;
+  transition-duration:0.5s, 0.3s, 0.5s, 0.3s;  
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+}
+
+.tooltips:hover { border: 0; /* IE6 fix */ }
+
+.tooltips:hover span {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 0px;
+  margin-top:  0px;
+  overflow: hidden;
+
+  -webkit-transition-property:opacity, margin-top, visibility, margin-left;
+  -webkit-transition-duration:0.5s, 0.3s, 0.5s, 0.3s;  
+  -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+
+  -moz-transition-property:opacity, margin-top, visibility, margin-left;
+  -moz-transition-duration:0.4s, 0.4s, 0.4s, 0.4s;  
+  -moz-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;		
+
+  -o-transition-property:opacity, margin-top, margin-left;
+  -o-transition-duration:0.5s, 0.3s, 0.3s;  
+  -o-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+
+  transition-property:opacity, margin-top, visibility, margin-left;
+  transition-duration:0.5s, 0.3s, 0.5s, 0.3s;  
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+}
+
+.tooltips span:before { border-top-color: #ccc; bottom: -8px; z-index: 1001; }
+
+/* yellow */
+.yellow span { border-color: #e1ca82; background-color: #ffeaa6; }
+.yellow span:after { border-top-color: #ffeaa6; }
+.yellow span:before { border-top-color: #e1ca82; }
+
+/* navy */
+.navy span { color: #fff; text-shadow: 0 1px 0 #000; border-color: #161a1f; background-color: #1e2227; }
+.navy span:after { border-top-color: #1e2227; }
+.navy span:before { border-top-color: #161a1f; }
+
+/* blue */
+.blue span { border-color: #59add4; background-color: #61bde7; }
+.blue span:after { border-top-color: #61bde7; }
+.blue span:before { border-top-color: #59add4; }
+
+/* pink */
+.pink span { border-color: #ce4378; background-color: #ea4c88; }
+.pink span:after { border-top-color: #ea4c88; }
+.pink span:before { border-top-color: #ce4378; }
+
+/* green */
+.green span { border-color: #56c86c; background-color: #a2f8b3; }
+.green span:after { border-top-color: #00ff00; }
+.green span:before { border-top-color: #00ff00; }
+
+/* sunflower */
+.sunflower span { border-color: #d0c32e; background-color: #ede36f; }
+.sunflower span:after { border-top-color: #ff0; }
+.sunflower span:before { border-top-color: #ff0; }
+
+/* white */
+.white span { border-color: #fff; background-color: #fff; }
+.white span:after { border-top-color: #fff; }
+.white span:before { border-top-color: #fff; }
+
+/* black */
+.black span { border-color: #222; background-color: #000; color: #fff; }
+.black span:after { border-top-color: #222; }
+.black span:before { border-top-color: #222; }
+
+/* different widths for tooltip, more can be added if needed */
+.wi50 span { width: 50px; }
+.wi100 span { width: 100px; }		
+.wi150 span { width: 150px; }
+.wi200 span { width: 200px; }
+.wi250 span { width: 250px; }
+.wi300 span { width: 300px; }
+.wi350 span { width: 350px; }
+.wi400 span { width: 400px; }
+
+/* directions for fading in - bottom position only, top only e2w or w2e */
+.w2e span { margin-left: -30px; }
+.nw2se span { margin-left: -30px; margin-top: -10px; }
+.sw2ne span { margin-left: -30px; margin-top: 10px; }
+.e2w span { margin-left: 30px; }
+.ne2sw span { margin-left: 30px; margin-top:-10px; }
+.se2nw span { margin-left: 30px; margin-top: 10px;}
+.n2s span { margin-top: -30px; }
+.s2n span { margin-top: 30px; }
+
+.bottom span { bottom: auto; top: 100%; }
+.top span { bottom: 30px; top: auto; }
+
+.tooltips span p {  border-bottom: 1px solid #000000; margin-top: 0px; margin-bottom: 5px; font-weight: bold; }
+

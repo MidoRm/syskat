@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>banner slider images scroll</name>
+	<author>joombig.com</author>
+	<creationDate>Dec 2014</creationDate>
+	<copyright>Copyright (C) 2014 joombig.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joombig.com</authorEmail>
+	<authorUrl>www.joombig.com</authorUrl>
+	<version>1.0</version>
+	<description>MODULE_DESC</description>
+	<languages>
+    <language tag="en-GB">language/en-GB.mod_banner_slider_images_scroll.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_banner_slider_images_scroll">mod_banner_slider_images_scroll.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>elements/</folder>
+		<folder>assets/</folder>
+		<folder>tmpl/</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_banner_slider_images_scroll/elements">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+					<option value="1">Enable</option>
+					<option value="0">Disable</option>
+				</field>
+				<field name="width" type="text" default="100%" label="Width of module(%)" description="Width of module(%)" />
+				<field name="height" type="text" default="330px" label="Height of module(px)" description="Height of module(px)" />
+				<field name="path" type="foldertree" default="" directory="images" filter="" label="Image large directory" description="Select a image directory" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>			
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6" method="upgrade" >
+  <name>CW Article Gallery Package FREE</name>
+	<author>Pavel Starý, Český WEB</author>
+	<creationDate>July 2017</creationDate>
+	<copyright>Copyright (c) 2012 - 2017 Pavel Starý - Cesky WEB s.r.o. All rights reserved.</copyright>
+  <authorEmail>support@cesky-web.com</authorEmail>
+  <authorUrl>http://www.cesky-web.eu</authorUrl>
+  <packagename>cwgallery</packagename>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.0.16</version>
+  <jversion>3.6.0</jversion>
+  <url>http://extensions.cesky-web.eu/</url>
+  <packager>CW Joomla Team</packager>
+  <packagerurl>http://extensions.cesky-web.eu</packagerurl>
+  <description><![CDATA[
+    <div style="text-align: left;">
+      <h3>CW Article Gallery Package FREE</h3>
+      <p>Fast and Simple Image Gallery for Joomla Articles</p>
+      <p>Package of plugins for allowing you to create easily an image gallery right inside the article edit!</p>
+      <p>STEP 1. Go to Extensions -> Plugin Manager -> and <a href="index.php?option=com_plugins&view=plugins&filter_search=cw%20article%20gallery">PUBLISH these plugins</a>:</p>
+      <ul>
+        <li>CW Gallery Content: Main plugin</li>
+        <li>CW Gallery Ajax Upload: Plugin for ajax upload functionality</li>
+        <li>Button - CW Gallery: Plugin for adding a Button into WYSIWYG Editor</li>
+      </ul>
+      <p>STEP 2. Set parameters in CW Article Gallery Plugin</p>
+      <p>STEP 3. In Article Edit view will be added new Tab "CW Gallery"</p>
+      <p>THIS IS FREE VERSION - WITH BACKLINKS AND LIMITED TO 3 IMAGES PER ARTICLE. IF YOU LIKE THE PLUGIN, SUBSCRIBE <a target="_blank" href="http://extensions.cesky-web.eu/buy-cwarticle-gallery/levels">HERE FOR PRO VERSION</a></p>      
+      <p>For more informations see documentation <a target="_blank" href="http://extensions.cesky-web.eu/documentation/joomla-article-gallery">here</a>.</p>
+    </div>
+  ]]>
+  </description>
+  
+  <files folder="packages">
+    <file type="plugin" id="cwgallery" group="content">plg_content_cwgallery_1.0.16_FREE.zip</file>
+    <file type="plugin" id="cwgalleryupload" group="ajax">plg_ajax_cwgalleryupload_1.1.5.zip</file>
+    <file type="plugin" id="cwgallery" group="editors-xtd">plg_editor-xtd_cwgallery_1.0.0.zip</file>
+  </files>
+
+  <!-- UPDATESERVER DEFINITION -->
+  <updateservers>
+    <!-- Note: No spaces or linebreaks allowed between the server tags -->
+    <server type="extension" priority="1" name="CW Gallery Update server">http://extensions.cesky-web.eu/update/pkg_cwgallery-update.xml</server>
+  </updateservers>  
+</extension>

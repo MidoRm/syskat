@@ -1,0 +1,13 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<gallerylist>
+
+<record>  <img>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/thumb/1.jpg</img> <bigpicture>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/big/1.jpg</bigpicture> <desc><![CDATA[<span class="reg">Description 1</span>]]></desc>
+           </record><record>  <img>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/thumb/2.jpg</img> <bigpicture>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/big/2.jpg</bigpicture> <desc><![CDATA[<span class="reg">Description 2</span>]]></desc>
+           </record><record>  <img>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/thumb/3.jpg</img> <bigpicture>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/big/3.jpg</bigpicture> <desc><![CDATA[<span class="reg">Description 3</span>]]></desc>
+           </record><record>  <img>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/thumb/4.jpg</img> <bigpicture>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/big/4.jpg</bigpicture> <desc><![CDATA[<span class="reg">Description 4</span>]]></desc>
+           </record><record>  <img>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/thumb/5.jpg</img> <bigpicture>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/big/5.jpg</bigpicture> <desc><![CDATA[<span class="reg">Description 5</span>]]></desc>
+           </record><record>  <img>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/thumb/6.jpg</img> <bigpicture>http://localhost/Clarion_25/modules/mod_adxmlgallery/images/big/6.jpg</bigpicture> <desc><![CDATA[<span class="reg">Description 6</span>]]></desc>
+           </record>
+	
+</gallerylist>

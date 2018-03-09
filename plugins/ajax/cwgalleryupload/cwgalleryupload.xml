@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5"
+           type="plugin"
+           group="ajax"
+           method="upgrade">
+	<name>CW Article Gallery Ajax Upload</name>
+	<author>Pavel Starý, Český WEB</author>
+	<creationDate>September 2016</creationDate>
+	<copyright>Copyright (c) 2012 - 2016 Pavel Starý - Cesky WEB s.r.o. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@cesky-web.com</authorEmail>
+	<authorUrl>http://www.cesky-web.eu</authorUrl>
+	<version>1.1.5</version>
+	<description><![CDATA[
+    <div style="text-align: left;">
+      <p>Ajax plugin for CW Gallery Upload functionality</p>
+      <p>It is needed for correct upload process during image upload in article edit.</p>
+      <p>For more informations see documentation <a href="#">here</a>.</p>
+    </div>
+  ]]>
+  </description>
+
+	<files>
+		<filename>index.html</filename>
+    <filename plugin="cwgalleryupload">cwgalleryupload.php</filename>
+    <filename plugin="cwgalleryupload">LICENSE.txt</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

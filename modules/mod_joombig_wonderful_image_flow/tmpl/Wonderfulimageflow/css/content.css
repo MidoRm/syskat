@@ -1,0 +1,71 @@
+
+/* _________________________________________________________ */
+
+/* CONTAINER */
+/* _________________________________________________________ */
+
+/* container */
+.column1container {width: 80px;}
+.column2container {width: 160px;}
+.column3container {width: 240px;}
+.column4container {width: 320px;}
+.column5container {width: 400px;}
+.column6container {width: 480px;}
+.column7container {width: 560px;}
+.column8container {width: 640px;}
+.column9container {width: 720px;}
+.column10container {width: 800px;}
+.column11container {width: 880px;}
+.column12container {width: 930px;}
+
+/* column */
+.column1,
+.column2,
+.column3,
+.column4,
+.column5,
+.column6,
+.column7,
+.column8,
+.column9,
+.column10,
+.column11,
+.column12 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column1 {width:60px;}
+.column2 {width:140px;}
+.column3 {width:220px;}
+.column4 {width:270px;}
+.column5 {width:380px;}
+.column6 {width:460px;}
+.column7 {width:540px;}
+.column8 {width:620px;}
+.column9 {width:700px;}
+.column10 {width:780px;}
+.column11 {width:860px;}
+.column12 
+{
+	width:930px;
+	margin :0 ; 
+	padding-top :20px; 
+	padding-bottom :15px; 
+	/*background-color:#E5EBF0; Silver */
+	background-color : transparent;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+

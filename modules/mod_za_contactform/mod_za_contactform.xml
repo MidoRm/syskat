@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3" client="site" method="upgrade">
+	<name>Za Contact Form</name>
+	 <author>Andrey</author>
+    <authorEmail>design@za-studio.ru</authorEmail>
+	<copyright>Copyright (C) Za-studio.net. All rights reserved.</copyright>
+    <creationDate>nov 2015</creationDate>
+    <authorUrl>www.za-studio.net</authorUrl>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>2</version>
+    <description> 
+	<![CDATA[
+    
+	<a href="http://za-studio.net" style="float:left;"><img src="../modules/mod_za_contactform/assets/images/logo.png" /></a>Za Contact Form - Ajax based quick contact Module. <br/>
+<br/>
+	<a href="http://www.za-studio.net/en/template/premium-templates-joomla">Templates</a><br/>
+	http://za-studio.net
+	<a href="http://www.za-studio.net/extension/modules-for-joomla">More extension..</a>
+    <br/>
+    ]]>
+	</description>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_za_contactform.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_za_contactform.ini</language>
+	</languages>	
+	<files>
+		<filename module="mod_za_contactform">mod_za_contactform.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="Basic">
+			<field name="width_button" type="text" default="200" label="ZA_WIDTH_BUTTON" description="ZA_WIDTH_BUTTON_DESC" />
+			<field name="label_text" type="text" default="Contact" label="ZA_CONTACT_BUTTON" description="ZA_CONTACT_BUTTON_DESC" />
+			<field name="login_text" type="text" default="Contact form" label="ZA_CONTACT_FORM" description="ZA_CONTACT_FORM_DESC" />
+				<field name="email" type="text" default="" label="ADMIN_EMAIL" description="ADMIN_EMAIL_DESC" />
+				<field name="success" type="text" default="Email was sent successfully." label="SUCCESS_NOTICE" description="SUCCESS_NOTICE" />
+				<field name="failed" type="text" default="Email could not be sent." label="FAILED_NOTICE" description="FAILED_NOTICE" />
+				<field name="formcaptcha" type="radio" class="btn-group" default="1" label="CAPTCHA" description="CAPTCHA_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="captcha_question" type="text" default="5 + 4 = ?" label="CAPTCHA_QUESTION" />
+				<field name="captcha_answer" type="text" default="9" label="CAPTCHA_ANSWER" />
+				<field name="failed_captcha" type="text" default="You have entered wrong captcha. Please try again." label="WRONG_CAPTCHA" />
+				<field name="color_text" type="color"  default="#e75854" label="ZA_CONTACT_COLOR" description="ZA_CONTACT_COLOR_DESC" />
+                <field name="backgr_text" type="color"  default="#fef0e3" label="ZA_CONTACT_BACKGR" description="ZA_CONTACT_BACKGR_DESC" />
+				<field name="hide_text" type="color"  default="#b09a86" label="ZA_CONTACT_HIDE" description="ZA_CONTACT_HIDE_DESC" />
+              
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

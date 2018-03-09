@@ -1,0 +1,332 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MENUS
+//---------------------------------------------------------------
+
+.nav.menu {
+	margin: 0;
+  li {
+    display: block;
+    background-image: none;
+    position: relative;
+    padding: 0;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  > li:first-child {
+    > a,
+    > span.separator {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: 0;
+    }
+  }
+  //elements
+  li a,
+  li span.separator {
+    display: block;
+    font-size: 14px;
+    color: @JMmenuLinkColor;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 17px 0;
+    vertical-align: top;
+    text-decoration: none;
+    border-top: 1px solid @JMborder;
+    border-bottom: 1px solid @JMborder;
+    margin-top: -1px;
+    background: none;
+    &:hover {
+      color: @JMmenuLinkHover;
+    }
+  }
+  li.active > a,
+  li.active > span.separator {
+    color: @JMmenuLinkHover;
+  }
+  > li.parent > a,
+  > li.parent > span.separator {
+    position: relative;
+    padding-right: 10px;
+    &:after {
+      content: '+';
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      position: absolute;
+      right: 0;
+      left: auto;
+    }
+  }
+  //first submenu level
+  .nav-child {
+   > li > a,
+   > li > span.separator {
+   	padding-left: 10px;
+	   	&:before {
+		   	content: '\203A';
+		   	margin-top: -1px;
+		   	margin-right: 10px;
+		   	font-family: Arial, Helvetica, sans-serif;
+		   	position: relative;
+		   	top: -1px;
+	   }
+   }
+ }
+ //second submenu level
+ 	.nav-child .nav-child {
+		> li > a,
+		> li > span.separator {
+	 		padding-left: 25px;
+	 	}
+ 	}
+ 	//third submenu level
+ 	.nav-child .nav-child .nav-child {
+		> li > a,
+		> li > span.separator {
+	 		padding-left: 40px;
+	 	}
+ 	}
+ 	//fourth submenu level
+ 	.nav-child .nav-child .nav-child .nav-child {
+		> li > a,
+		> li > span.separator {
+	 		padding-left: 55px;
+	 	}
+ 	}
+ 	//image
+  li a img {
+    vertical-align: middle;
+    margin: 0 15px 0 0;
+  }
+}
+
+// megamenu menu
+.dj-megamenu .nav.menu {
+  li a,
+  li span.separator {
+  	font-size: (@JMbaseFontSize - 1);
+  	color: @JMmenuMegamenuFontColor;
+		border-color: @JMmenuMegamenuBorder;
+		&:hover {
+			color: @JMmenuMegamenuFontColorHover;
+		}
+  }
+  li.active > a,
+  li.active > span.separator {
+  	color: @JMmenuMegamenuFontColorHover;
+  }
+}
+
+// menu color1-ms
+#jm-allpage .color1-ms .nav.menu {
+  li a,
+  li span.separator {
+  	color: @JMmoduleColor1msFontColor;
+		border-color: @JMmoduleColor1msBorder;
+		&:hover {
+			color: @JMmoduleColor1msFontColorHover;
+		}
+  }
+  li.active > a,
+  li.active > span.separator {
+    color: @JMmoduleColor1msFontColorHover;
+  }
+}
+
+// menu color2-ms
+#jm-allpage .color2-ms .nav.menu {
+  li a,
+  li span.separator {
+  	color: @JMmoduleColor2msFontColor;
+		border-color: @JMmoduleColor2msBorder;
+		&:hover {
+			color: @JMmoduleColor2msFontColorHover;
+		}
+  }
+  li.active > a,
+  li.active > span.separator {
+    color: @JMmoduleColor2msFontColorHover;
+  }
+}
+
+// offcanvas menu
+#jm-offcanvas .nav.menu {
+  li a,
+  li span.separator {
+  	color: @JMmenuOffcanvasFontColor;
+		border-color: @JMmenuOffcanvasBorder;
+		&:hover {
+			color: @JMmenuOffcanvasFontColorHover;
+		}
+  }
+  li.active > a,
+  li.active > span.separator {
+    color: @JMmenuOffcanvasFontColorHover;
+  }
+}
+
+// top-bar menu
+#jm-top-bar .nav.menu {
+  > li {
+    display: inline-block;
+    background: none;
+    vertical-align: top;
+    margin: 0;
+  }
+  li a,
+  li span.separator {
+  	color: @JMtopbarMenuLinkColor;
+  }
+  li:hover > a,
+  li:hover > span.separator,
+  li.active > a,
+  li.active > span.separator {
+    color: jmdarken(@JMtopbarMenuLinkColor, 30%);
+  }
+  > li > a,
+  > li > span.separator {
+    font-size: 13px;
+    padding: 0 0 0 15px;
+    margin: 0;
+    height: @JMtopbarHeight;
+    line-height: @JMtopbarHeight;
+    border: none;
+  }
+  ul,
+  > li.parent > a:after,
+  > li.parent > span.separator:after {
+    display: none;
+  }
+}
+
+//dropdown
+@keyframes fadeInFromNone {
+    0% {
+        display:none; 
+        .opacity(0);
+    }
+
+    1% {
+        display: block ; 
+        .opacity(0);
+    }
+
+    100% {
+        display: block ; 
+        .opacity(100);
+    }
+}
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display:none; 
+        .opacity(0);
+    }
+
+    1% {
+        display: block ; 
+        .opacity(0);
+    }
+
+    100% {
+        display: block ; 
+        .opacity(100);
+    }
+}
+
+#jm-top-bar .nav.menu {
+  li ul {
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
+    display: none;
+    visibility: hidden;
+    background: @JMtopbarBackground;
+    li {
+      min-width: @JMmenuTopbarSubmenuWidth;
+      display: block;
+      position: relative;
+      a,
+      span.separator {
+      	margin: 0;
+        padding: 10px 20px;
+        border: none;
+      }
+    }
+    li + li {
+      border-top: 1px solid @JMtopbarBorder;
+    }
+  }
+  li:hover > ul {
+    display: block;
+    visibility: visible;
+    z-index: 505;
+    .animation(fadeInFromNone 0.4s ease);
+  }
+  li li ul {
+    top: 0;
+    left: 100%;
+    right: auto;
+  }
+}
+
+// tags
+.tagspopular ul,
+.tagssimilar ul,
+.nav.menu.tag-ms,
+.tag-ms .nav.menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  > li {
+    display: inline-block;
+    border: none;
+    background: none;
+    margin: 0 10px 10px 0;
+    padding: 0;
+  }
+  > li a {
+    color: @JMtagsLinkColor;
+    padding: 5px 15px!important;
+    background: @JMtagsBackgroundColor;
+    border: 1px solid @JMtagsBorderColor;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    .border-radius(3px);
+    &:after {
+      display: none;
+    }
+  }
+  > li:hover a,
+  > li.active a {
+    color: @JMtagsActiveLinkColor!important;
+    border: 1px solid @JMtagsActiveBorderColor;
+    background: @JMtagsActiveBackground;
+    &:hover {
+      color: @JMtagsActiveLinkColor!important;
+    }
+  }
+  ul {
+    display: none;
+  }
+}
+
+.tagspopular ul,
+.tagssimilar ul {
+  > li {
+    margin: 0 6px 10px 0;
+  }
+  > li a {
+    padding: 6px 18px;
+  }
+}

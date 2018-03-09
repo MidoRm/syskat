@@ -1,0 +1,268 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// TABS
+//---------------------------------------------------------------
+
+#jm-allpage .djtabs.default-theme {
+  margin: 0;
+  .tabs-wrapper {
+    font-size: 0; // remove inline-block space
+  }
+  .djtabs-title-wrapper {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  .djtabs-title {
+    font: inherit;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: @JMtabFontColor;
+    height: auto;
+    line-height: 32px;
+    background: @JMtabBackground;
+    border: 1px solid @JMborder;
+    margin: 0 0 -1px;
+    padding: 13px 20px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: left;
+    .border-radius(0);
+    .transition(background 0.2s ease-in);
+    width: auto;
+  }
+  .djtabs-title-wrapper + .djtabs-title-wrapper .djtabs-title {
+  	margin-left: -1px;
+  }
+  .djtabs-title:hover, 
+  .djtabs-active-wrapper .djtabs-title {
+    background: @JMtabsBackground;
+  }
+  .djtabs-active-wrapper .djtabs-title {
+  	position: relative;
+  	border-top: 1px solid @JMstyle;
+  	border-bottom: none;
+  	padding-bottom: 14px;
+  }
+  .djtabs-in-border {
+    border: 1px solid @JMborder;
+    background: @JMtabsBackground; 
+  }
+  .djtabs-in {
+    margin: 25px;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    vertical-align: baseline;
+    margin: 0;
+  }
+  .djtab-custom-html {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+  
+	// accordion panel in tabs
+  .djtabs-panel {
+    height: 25px;
+    line-height: 25px;
+    margin: 0;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    border-top: 1px solid @JMborder;
+    .border-radius(0);
+    span {
+      line-height: 25px;
+    }
+    .djtabs-panel-date {
+      margin: 0 15px 0 0;
+      color: @JMtabDateColor;
+      font: inherit;
+      font-weight: 400;
+    }
+    .djtabs-panel-title {
+      margin: 0 15px 0 0;
+      text-transform: none;
+      color: @JMaccordionFontColor;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      a {
+      	text-decoration: none;
+      }
+    }
+  }
+  .djtabs-panel:hover,
+  .djtabs-panel-active {
+    .djtabs-panel-title {
+      color: @JMstyleAccordionFontColorHover;
+    }
+  }
+  .djtabs-panel > span.djtabs-panel-toggler {
+    margin: 4px 5px 0;
+    width: 17px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../images/plus.png');
+    .border-radius(0);
+    .transition(background-color 0.2s ease-in);
+    background-color: transparent;
+  }
+  .djtabs-panel-active > span.djtabs-panel-toggler {
+    background-image: url('../images/minus.png');
+    background-color: transparent;
+  }
+  
+  // in article
+  .djtabs-date-in {
+    color: @JMtabDateColor;
+    font-size: 13px;
+  }
+  .djtabs-article-content {
+    font: inherit;
+    color: @JMbaseFontColor;
+    margin: 0;
+    a {
+    	color: @JMstyleLink;
+    }
+  }
+  .djtabs-article-footer {
+    margin: 15px 0 0;
+  }
+  .djtabs-article-author,
+  .djtabs-article-category {
+    font: inherit;
+    font-weight: 400;
+    margin: 0 0 0 10px;
+    color: @JMtabCategoryAuthorColor;
+    a {
+      font-weight: 400;
+      color: @JMstyleLink;
+    }
+  }
+  
+  // readmore
+  .djtabs-readmore {
+    margin: 15px 0 0;
+    display: block;
+    width: 100%;
+    a {
+      .readmore();
+      font-style: normal;
+    }
+  }
+  
+  .tabsBlock {
+    width: 100%;
+    margin: 0;
+  }
+  // article category
+  .type-article-category {
+  	.accordion_help_class {
+  		margin: -25px 0;
+  		display: inline-block;
+  		vertical-align: top;
+  	}
+	  .djtabs-article-group:first-child {
+	  	.djtabs-panel {
+	  		border: none;
+	  	}
+	  }
+	  .djtabs-article-content {
+	  	margin: 0 0 25px;
+	  }
+  }
+  // single article
+  .type-article {
+    .djtabs-panel {
+      padding: 0;
+      margin: 0 0 20px;
+      border: none!important;
+    }
+    .djtabs-panel-active .djtabs-panel-title {
+    	color: @JMtabFontColor;
+    	&:hover {
+    		color: @JMstyleAccordionFontColorHover;
+    	}
+    }
+  }
+  // intro image
+  .djtabs-article-img.dj-img-left {
+    margin-right: 20px;
+  }
+  .djtabs-article-img.dj-img-right {
+    margin-left: 20px;
+  }
+  .djtabs-article-img {
+    margin-bottom: 20px;
+  }
+}
+
+#jm-allpage .djtabs.default-theme.accordion {
+  margin: 1px 0 0;
+  padding: 0 25px;
+  border: 1px solid @JMborder;
+  .djtabs-title-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  .djtabs-title-wrapper {
+  	&:first-child {
+  		.djtabs-title {
+  			border-top: none;
+  		}
+  	}
+  }
+  .djtabs-title {
+    color: @JMaccordionFontColor;
+    font-weight: 600;
+    font-size: 16px;
+    .box-sizing(border-box);
+    margin: -1px 0 0;
+    background: none!important;
+    line-height: 25px;
+    padding: 20px 30px 20px 0;
+    position: relative;
+    border-top: 1px solid @JMborder;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    width: 100%;
+    &:after {
+      content: '';
+      position: absolute;
+      left: auto;
+      right: 5px;
+      top: 50%;
+      margin-top: -9px;
+      width: 17px;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('../images/plus.png');
+    }
+    &:hover {
+    	color: @JMstyleAccordionFontColorHover;
+    }
+  }
+  .djtabs-title.djtabs-active:after {
+    background-image: url('../images/minus.png');
+  }
+  .djtabs-active-wrapper .djtabs-title {
+    color: @JMstyleAccordionFontColorHover;
+  }
+  .djtabs-in-border {
+    border: none;
+  }
+  .djtabs-panel.djtabs-panel-article .djtabs-panel-title {
+  	font-size: @JMbaseFontSize;
+  }
+  .djtabs-in {
+    margin: 0 0 25px;
+  }
+}

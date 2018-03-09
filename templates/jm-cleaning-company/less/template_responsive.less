@@ -1,0 +1,230 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "template_mixins.less";
+
+// RESPONSIVE
+//---------------------------------------------------------------
+
+@media (max-width: 1170px) {
+	#jm-allpage .dj-megamenu li a.dj-up_a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 979px) {
+  
+  // global
+  // --------------------------
+  
+  //module height
+  
+  .jm-module-in {
+    height: auto !important;
+  }
+  
+  //responsive images
+  
+  img {
+    .box-sizing(border-box);
+  }
+  
+  //fix on displaying buttons on webkit browsers
+  .btn {
+    -webkit-appearance: none;
+  }
+
+  // layout
+  // --------------------------
+  
+  //djmenu
+  #jm-djmenu {
+    text-align: center;
+  }
+  
+  //back to top
+  #jm-back-top span {
+    width: 40px;
+    height: 40px;
+  }
+
+  // modules
+  // --------------------------
+  
+  //reset the module height suffix
+  .jm-module-in {
+    height: auto !important;
+  }
+  
+  //custom
+  .jm-bottom-box .icon {
+     display: block;
+   }  
+  
+}
+ 
+@media (max-width: 767px) {
+  
+  // global
+  // --------------------------
+  
+  //responsive inputs
+  input, select, textarea {
+    max-width: 100%;
+  }
+  
+  // layout
+  // --------------------------
+
+	#jm-footer-left,
+	#jm-footer-right,
+	#jm-footer-center {
+		text-align: center;
+	}	
+
+  // modules
+  // --------------------------
+  
+  //custom
+  .jm-bottom-box {
+  	margin: 0;
+  	text-align: center;
+	  .content {
+	    padding-top: 30px;
+	  }
+	 }
+
+  // joomla
+  // --------------------------
+
+  //article items
+  .items-row {
+    margin-bottom: @JMbaseSpace;
+  }
+  
+  .items-row .item {
+    margin-bottom: @JMbaseSpace;
+  }
+  
+}
+
+@media (max-width: (@JMsearchWidth + 110)) {
+	#jm-bar-right {
+		min-width: none;
+	}
+	#jm-allpage #jm-page .search-ms {
+		.search form {
+			width: auto;
+			height: auto;
+		}
+		.search input#mod-search-searchword {
+			position: static;
+		}
+		.search input.button,
+		.search button.button {
+			right: 5px;
+		}
+		.search input#mod-search-searchword {
+			max-width: 100%;
+			padding: 0 30px 0 10px;
+	  	width: 100%;
+	  	border-color: @JMstyle;
+	  	pointer-events: auto;
+			.opacity(100);
+		}
+	}
+	html[dir='rtl'] #jm-allpage #jm-page .search-ms {
+		.search input.button,
+		.search button.button {
+			right: auto;
+			left: 5px;
+		}
+		.search input#mod-search-searchword {
+			padding: 0 10px 0 30px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	
+	// global
+  // --------------------------
+  
+	//responsive inputs
+	input, select, textarea {
+	  width: 100%;
+	}
+
+	//tabs
+  dl.tabs,
+  .nav-tabs {
+    display: block!important;
+  }
+  dl.tabs dt.tabs,
+  .nav-tabs > li {
+    float: none!important;
+  }
+	
+	// layout
+  // --------------------------
+
+  #jm-bar-left,
+  #jm-bar-right {
+  	float: none;
+  	width: 100%;
+  	min-width: 0;
+  	padding: 0 0 20px;
+  	text-align: center;
+  }
+  
+  #jm-bar-left {
+  	padding-top: 20px;	
+  }
+	
+	#jm-allpage {
+		padding: 0!important;
+	}
+	
+	.sticky-bar #jm-bar-wrapp {
+		position: static;
+	}
+	
+	// modules
+  // --------------------------
+  
+  //DJ-Tabs
+  #jm-allpage #jm-page .djtabs.default-theme {
+	  .djtabs-title-wrapper {
+	    width: 100%;
+	    .djtabs-title {
+	    	margin: 0!important;
+	    }
+	    + .djtabs-title-wrapper .djtabs-title {
+	    	border-bottom: 1px solid transparent;
+	    }
+	  }
+		.djtabs-active-wrapper .djtabs-title {
+		  border-bottom: none;
+		}
+  }
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+  
+@import "djmediatools_responsive.less";

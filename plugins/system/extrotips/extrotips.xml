@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - eXtroTips - CSS3 Tooltips</name>
+	<author>eXtro-media.de</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@eXtro-media.de</authorEmail>
+	<authorUrl>www.eXtro-media.de</authorUrl>
+	<version>1.0.3</version>
+
+	<description><![CDATA[
+   <div class="alert">
+   <h2>eXtrotips - creates CCS3 Tooltips.</h2>
+   <br />
+   <p><strong>If you use <a href="http://extensions.joomla.org/extensions/news-display/article-elements/tooltips/19523" target="_blank">eXtrotips</a>, please post a rating and a review at the Joomla! Extensions Directory.</strong></p>
+   <br />
+   <p>Please read the extension's <a href="http://www.extro-media.de/en/software-en/quickstart-guides.html" target="_blank">users manual.</a></p>
+   <br />
+   <p>Here you can find our <a href="http://www.extro-media.de/new-ticket.html" target="_blank" >Ticket system</a> if you have any questions or issues.</p>
+   <br /><br />
+   <p>More useful eXtensions by <a href="http://www.extro-media.de/" target="_blank">eXtro-media.de</a>:</p>
+   <div id="extro" class="klasse" >
+   </div>
+   </div>
+	<style>
+	.klasse { width: auto; height: auto; display: block; margin: 15px 0; } 
+   </style>
+   <script src="http://updates.extro-media.de/script.js" type="text/javascript">
+   </script>
+	]]>
+	</description>
+
+	<files>
+		<filename plugin="extrotips">extrotips.php</filename>
+		<filename>extrotips.css</filename>
+		<filename>index.html</filename>
+    <filename>extrotips.xml</filename>
+	</files>
+
+   <updateservers>
+     <server type="extension" priority="1" name="eXtro-media Update Server">http://updates.extro-media.de/tips.xml</server>
+   </updateservers>
+
+</extension>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<extension type="module" version="3.2" client="site"   method="upgrade">
+
+  <name>Gallery WD SlideShow Lite</name>
+
+	<creationDate>April 2014</creationDate>
+	<author>Web-Dorado</author>
+	<authorUrl>http://www.web-dorado.com</authorUrl>
+    <copyright>Copyright (C) 2014 Web-Dorado.com. All rights reserved.</copyright> 
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.3.9</version>
+
+
+  <files>
+
+   <filename module="mod_gallery_wd_slideshow">mod_gallery_wd_slideshow.php</filename>
+	<filename>index.html</filename>
+	<filename>helper.php</filename>
+	<folder>elements</folder>
+	<folder>tmpl</folder>
+  </files>
+<config>
+  <fields name="params">
+
+
+  	<fieldset name="basic" label="Module Parameters">
+	   <field name="getpro" type="getpro"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/"  label="" />
+
+  <field name="gallery_id" type="galleryselect"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/"  label="Select Gallery:" />
+  <field name="dimensions" width="20" type="dimensions"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/" default="250x250" label="Dimensions:" />
+	
+	  <field name="slide_effect" type="list" default="fade"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/"  label="SlideShow Effect:" >
+	  <option  value="none">None</option>
+	  <option disabled="disabled" value="cubeH">Cube Horizontal</option>
+	  <option disabled="disabled" value="cubeV">Cube Vertical</option>
+	  <option value="fade">Fade</option>
+	  <option disabled="disabled" value="sliceH">Slice Horizontal</option>
+	  <option disabled="disabled" value="sliceV">Slice Vertical</option>
+	  <option disabled="disabled" value="slideH">Slide Horizontal</option>
+	  <option disabled="disabled" value="slideV">Slide Vertical</option>
+	  <option disabled="disabled" value="scaleOut">Scale Out</option>
+	  <option disabled="disabled" value="scaleIn">Scale In</option>
+	  <option disabled="disabled" value="blockScale">Block Scale</option>
+	  <option disabled="disabled" value="kaleidoscope">Kaleidoscope</option>
+	  <option disabled="disabled" value="fan">Fan</option>
+	  <option disabled="disabled" value="blindH">Blind Horizontal</option>
+	  <option  disabled="disabled" value="blindV">Blind Vertical</option>
+	  <option disabled="disabled" value="random">Random</option>
+	  </field>
+
+	   <field name="time_interval" width="20" type="text"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/" default="5" label="Time Interval:" />
+  
+    <field name="enable_shuffle" type="radio" default="0" label="Enable shuffle:" description=" ">			
+	<option value="1"> Yes </option>			
+	<option value="0"> No </option>	
+	</field>
+  	  
+  
+  <field name="theme_id" type="themeselect"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/"  label="Select Theme:" />
+      
+	  
+
+
+		</fieldset>
+		</fields>
+		</config>
+
+</extension>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<extension type="module" version="3.2" client="site"   method="upgrade">
+
+  <name>Gallery WD Lite</name>
+	<creationDate>April 2014</creationDate>
+	<author>Web-Dorado</author>
+	<authorUrl>http://www.web-dorado.com</authorUrl>
+    <copyright>Copyright (C) 2014 Web-Dorado.com. All rights reserved.</copyright> 
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.3.9</version>
+
+  <files>
+
+   <filename module="mod_gallery_wd">mod_gallery_wd.php</filename>
+	<filename>index.html</filename>
+	<filename>helper.php</filename>
+	<folder>elements</folder>
+	<folder>tmpl</folder>
+  </files>
+<config>
+  <fields name="params">
+
+
+  	<fieldset name="basic" label="Module Parameters">
+		   <field name="getpro" type="getpro"  addfieldpath="/modules/mod_gallery_wd_slideshow/elements/"  label="" />
+
+	<field name="type" type="radio" default="gallery" label="Type:" description=" ">			
+	<option value="gallery"> Gallery  </option>			
+	<option value="album"> Album </option>	
+	</field> 
+  <field name="gallery_id" type="galleryselect"  addfieldpath="/modules/mod_gallery_wd/elements/"  label="Select Gallery:" />
+  <field name="album_id" type="albumselect"  addfieldpath="/modules/mod_gallery_wd/elements/"  label="Select Album:" />
+  
+  
+   <field name="show" type="radio" default="random" label="Enable shuffle:" description=" ">			
+	<option value="random"> Random </option>			
+	<option value="last"> Last </option>	
+	</field>
+  
+	<field name="dimensions" width="20" type="dimensions"  addfieldpath="/modules/mod_gallery_wd/elements/" default="250x250" label="Dimensions:" />
+	<field name="count" width="20" type="text"  addfieldpath="/modules/mod_gallery_wd/elements/" default="4" label="Count:" />
+	<field name="theme_id" type="themeselect"  addfieldpath="/modules/mod_gallery_wd/elements/"  label="Select Theme:" />
+      
+	  
+
+
+		</fieldset>
+		</fields>
+		</config>
+
+</extension>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - CW Article Gallery</name>
+	<creationDate>February 2015</creationDate>
+  <author>Pavel Starý, Český WEB</author>
+	<copyright>Copyright (c) 2012 - 2015 Pavel Starý - Cesky WEB s.r.o. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@cesky-web.com</authorEmail>
+	<authorUrl>http://www.cesky-web.eu</authorUrl>
+	<version>1.0.0</version>
+  <description><![CDATA[
+    <div style="text-align: left;">
+      <p>Plugin to display CW Gallery Button in Editor</p>
+      <p>It allows you to put gallery plugin syntax on current position into the content by simple one-click.</p>
+      <p>For more informations see documentation <a href="#">here</a>.</p>
+    </div>
+  ]]>
+  </description>
+	<files>
+    <filename plugin="cwgallery">cwgallery.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

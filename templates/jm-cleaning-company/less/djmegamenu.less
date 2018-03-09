@@ -1,0 +1,352 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "template_mixins.less";
+
+// MEGAMENU
+//---------------------------------------------------------------
+
+.dj-megamenu {
+  margin: -20px 0;
+  position: relative;   
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  z-index: 500;
+  font-family: @JMtopmenuFontFamily;
+}
+
+.dj-megamenu li.dj-up {
+  background-image: none;
+  position: relative;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  a.dj-up_a {
+    font-size: @JMtopmenuFontSize;
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: (@JMmegamenuElementHeight /2) 25px;
+    line-height: 20px;
+    cursor: pointer;
+    color: @JMmegamenuFontColor;
+    text-align: center;
+    span {
+      display: block;
+    }
+    small.subtitle {
+    	position: relative;
+    	bottom: 0;
+      display: block;
+      font-size: @JMmegamenuElementSubtitleFontSize;
+      text-transform: none;
+      line-height: (@JMmegamenuElementSubtitleFontSize+2);
+      .opacity(80);
+    }
+  }
+  &:before,
+  &:after {
+  	content: '';
+  	position: absolute;
+  	top: 50%;
+  	width: 1px;
+  	height: @JMtopmenuFontSize;
+  	margin-top: -(@JMtopmenuFontSize /2);
+  	right: auto;
+  	left: 0;
+  	background: @JMbarBorder;
+  	.transition(all 0.3s ease 0s);
+  }
+  &:after {
+  	right: 0;
+  	left: auto;
+  }
+  + li.dj-up {
+  	margin-left: -1px;
+  }
+  &.active {
+      a.dj-up_a {
+      color: @JMstyleMegamenuFontHover;
+      outline: 0;
+    }
+  }
+  &:hover,
+  &.hover  {
+  	&:before,
+    &:after {
+    	top: 0;
+    	height: 100%;
+    	margin: 0;
+    }
+    a.dj-up_a {
+      color: @JMstyleMegamenuFontHover;
+      outline: 0;
+    }
+  } 
+}
+
+.dj-megamenu.hasSubtitles li a.dj-up_a {
+	padding: ((@JMmegamenuElementHeight - (@JMmegamenuElementSubtitleFontSize + 2)) /2) 25px;
+}
+
+.dj-megamenu li.separator > a {
+  cursor: default;
+}
+
+// sticky
+// --------------------------  
+
+.dj-megamenu-sticky {
+	margin: 0;
+  background: @JMbarBackground;
+  border-bottom: 1px solid @JMbarBorder;
+  ul.dj-megamenu {
+  	margin: 0;
+  }
+  li.dj-up {
+	  a.dj-up_a {
+			padding: (@JMmegamenuElementHeight /4) 25px;
+	  }
+  }
+}
+
+// select
+// --------------------------  
+
+#jm-allpage .dj-select {
+	max-width: none;
+	margin: 10px 0;
+	font-family: inherit;
+  font-size: @JMinputFontSize;
+  font-weight: 400;
+  padding: @JMinputPadding;
+  vertical-align: middle;
+  border: 1px solid @JMinputBorder;
+  color: @JMinputFontColor;
+  background: @JMinputBackground;
+  height: @JMinputHeight;
+  line-height: @JMinputHeight;
+}
+
+// submenu
+// --------------------------  
+
+.dj-megamenu li.dj-up:hover,
+.dj-megamenu li.dj-up.hover,
+.dj-megamenu .dj-submenu > li:hover,
+.dj-megamenu .dj-subtree > li:hover {
+  position: relative;
+  z-index: 200;
+}
+
+//hide submenus
+.dj-megamenu li div.dj-subwrap {
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: -9999px;
+  visibility: hidden;
+}
+
+//first level submenu
+.dj-megamenu {
+  li:hover,
+  li.hover {
+    div.dj-subwrap {
+      left: 0;
+      right: auto;
+      top: 100%;
+ 			visibility: visible;
+      z-index: 300;
+      .box-sizing(border-box);
+      border-top: 1px solid transparent;
+      div.dj-subwrap-in {
+        background: @JMmegamenuSubmenuBackground;
+      }
+    }
+  }
+}
+
+//higher level submenu
+.dj-megamenu {
+  li:hover,
+  li.hover {
+    div.dj-subwrap div.dj-subwrap {
+      left: 100%;
+      right: auto;
+      top: 0;
+      z-index: 400;
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+  }
+}
+
+//submenu elements styles
+.dj-megamenu .dj-subcol {
+  float: left;
+  .box-sizing(border-box); 
+}
+
+.dj-megamenu .dj-submenu,
+.dj-megamenu .dj-subtree {
+  > li {
+    display: block;
+    position: relative;
+    padding: 0 15px;
+    background: none;
+    > a {
+      color: @JMmegamenuSubmenuFontColor;
+      display: block;
+      font-size: 13px;
+      line-height: 20px;
+      text-decoration: none;
+      padding: 13px 0;
+      border-bottom: 1px solid jmlighten(@JMmegamenuSubmenuBackground, 15%);
+      small.subtitle {
+        display: block;
+        font-size: 11px;
+      }
+    }
+    &:first-chil > a {
+    	border: none;
+    }
+  }
+  > li:hover > a,
+  > li.hover > a,
+  > li.active > a {
+    color: @JMstyleMegamenuSubmenuActiveFontColor;
+  }
+  > li.parent > a {
+    position: relative;
+    &:after {
+      content: '+';
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      right: 5px;
+      left: auto;
+    }
+  }
+}
+
+//image in menu
+.dj-megamenu {
+  li.dj-up a.dj-up_a {
+		span.image-title {
+			margin: 0 0 0 15px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		li > a > img {
+			vertical-align: middle;
+		}
+	}
+}
+
+// submenu tree
+// --------------------------  
+.dj-megamenu .dj-subtree {
+  list-style: none outside;
+  padding: 0 !important;
+  margin: 0!important;
+  > li {
+    list-style: none outside;
+    padding: 0 0 0 15px;
+    margin: 0;
+  }
+  > li > a {
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    padding: 5px 15px;
+    background-position: left 50%;
+    background-repeat: no-repeat;
+    background-image: url('../images/@{JMimgDir}/li.png');
+    border: none;
+    &:after {
+    	display: none;
+    }
+  }
+  > li > a small.subtitle {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1;
+  }
+}
+
+// modules
+// --------------------------  
+
+.dj-megamenu .modules-wrap {
+  padding: 20px 5px;
+  color: @JMmegamenuSubmenuFontColor;
+  p {
+    display: block;
+    padding: 0;
+  }
+  .moduletable {
+    clear: both;
+    padding: @JMbaseSpace 0 0;
+    margin: @JMbaseSpace 0 0;
+    position: relative;
+    font-size: (@JMbaseFontSize - 1);
+    > h3 {
+      color: @JMmegamenuModuleTitle;
+      font-weight: 400;
+      font-size: @JMtopmenuFontSize;
+      line-height: 1.1;
+      position: relative;
+			margin: 0 0 20px;
+			padding: 0 0 20px;
+			border-bottom: 1px solid jmlighten(@JMmegamenuSubmenuBackground, 15%);
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				border-bottom: 1px solid jmlighten(@JMmegamenuSubmenuBackground, 15%);
+				left: 0;
+				right: auto;
+				bottom: 1px;
+			}
+    }
+    &:first-child {
+      padding: 0;
+      margin: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &:after {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 80%;
+      height: 0;
+      border-bottom: 1px solid jmlighten(@JMmegamenuSubmenuBackground, 15%);
+    }
+  }
+}
+

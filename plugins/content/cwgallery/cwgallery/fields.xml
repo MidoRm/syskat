@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs" addfieldpath="/plugins/content/cwgallery/cwgallery/fields">
+		<fieldset name="cwgallery"
+			label="PLG_CWGALLERY_SLIDER_LABEL"				
+		>            	
+      <field name="gallery_settings" type="note" class="cwred" label="PLG_CWGALLERY_HEADER_GALLERY_SETTINGS" description="PLG_CWGALLERY_HEADER_GALLERY_SETTINGS_DESC" />     
+      <field name="cwgallery_thumb_width" filter="integer" type="thumbsize" default="" size="5" label="PLG_CWGALLERY_THUMB_WIDTH_LABEL" description="PLG_CWGALLERY_THUMB_WIDTH_DESC"/>
+      <field name="cwgallery_thumb_height" filter="integer" type="thumbsize" default="" size="5" label="PLG_CWGALLERY_THUMB_HEIGHT_LABEL" description="PLG_CWGALLERY_THUMB_HEIGHT_DESC"/>
+
+			<field
+				name="uploadphotos"
+				type="cwgallery"
+				id="uploadphotos"
+				description="PLG_CWGALLERY_SETGALLERY_OPTION_DESC"	
+				label="PLG_CWGALLERY_SETGALLERY_OPTION_LABEL"
+				message="PLG_CWGALLERY_SETGALLERY_OPTION_MESSAGE"
+			/>
+      
+      <field name="custom_settings" type="note" label="PLG_CWGALLERY_HEADER_CUSTOM_SETTINGS" description="PLG_CWGALLERY_HEADER_CUSTOM_SETTINGS_DESC" />     
+      <field name="cwgallery_position" type="list" default="" label="PLG_CWGALLERY_POSITION_LABEL"  description="PLG_CWGALLERY_POSITION_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="0">PLG_CWGALLERY_POSITION_DOWN</option>
+        <option value="1">PLG_CWGALLERY_POSITION_UP</option>
+        <option value="off">PLG_CWGALLERY_POSITION_OFF</option>
+			</field>          
+      <field name="blog_use" type="list" default="" label="PLG_CWGALLERY_BLOG_USE_LABEL"  description="PLG_CWGALLERY_BLOG_USE_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+			</field>
+
+
+      <field name="caption_color" type="list" default="" label="PLG_CWGALLERY_CAPTION_COLOR_LABEL"  description="PLG_CWGALLERY_CAPTION_COLOR_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="dark">PLG_CWGALLERY_CAPTION_DARK</option>
+        <option value="light">PLG_CWGALLERY_CAPTION_LIGHT</option>
+			</field> 
+      
+<field type="spacer" name="spacer1" hr="true" />
+<!-- LIGHTBOX TYPE -->
+      <field name="lightbox" type="list" default="" label="PLG_CWGALLERY_LIGHTBOX_LABEL"  description="PLG_CWGALLERY_LIGHTBOX_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="lightbox">Lightbox</option>
+        <option value="simplelightbox">Simple Lightbox</option>
+        <option value="lightgallery">LightGallery</option>
+			</field>
+
+
+<field type="spacer" name="spacer2" hr="true" />
+      <field name="show_desc_in_detail" showon="" type="list" default="" label="PLG_CWGALLERY_SHOW_DESC_IN_DETAIL_LABEL" description="PLG_CWGALLERY_SHOW_DESC_IN_DETAIL_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+			</field>   
+      <field name="show_info_on_hover" showon="" type="list" default="" label="PLG_CWGALLERY_SHOW_INFO_ON_HOVER_LABEL" description="PLG_CWGALLERY_SHOW_INFO_ON_HOVER_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+			</field>
+        <field name="show_caption_on_hover" showon="show_info_on_hover:1" type="list" default="" label="PLG_CWGALLERY_SHOW_CAPTION_ON_HOVER_LABEL" description="PLG_CWGALLERY_SHOW_CAPTION_ON_HOVER_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+  			</field>
+        <field name="show_desc_on_hover" showon="show_info_on_hover:1" type="list" default="" label="PLG_CWGALLERY_SHOW_DESC_ON_HOVER_LABEL" description="PLG_CWGALLERY_SHOW_DESC_ON_HOVER_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+  			</field>
+      
+<field type="spacer" name="spacer3" hr="true" />
+<!-- GALLERY TYPE -->
+      <field name="layout" type="list" default="" label="PLG_CWGALLERY_LAYOUT_LABEL"  description="PLG_CWGALLERY_LAYOUT_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="gallery">Gallery</option>
+        <option value="slider">Slider</option>
+			</field>
+            
+      <!-- GALLERY LAYOUT -->
+      <field name="layout_simplelightbox" type="note" label="PLG_CWGALLERY_HEADER_LAYOUT_SIMPLELIGHTBOX" description="" />     
+      <field name="columns" filter="text" showon="layout:gallery" type="text" default="" size="5" label="PLG_CWGALLERY_COLUMNS_LABEL" description="PLG_CWGALLERY_COLUMNS_DESC"/>
+      <field name="border" filter="text" showon="layout:gallery" type="text" default="" size="5" label="PLG_CWGALLERY_BORDER_LABEL" description="PLG_CWGALLERY_BORDER_DESC"/>
+      <field name="zoom" filter="text" showon="layout:gallery" type="text" default="" size="5" label="PLG_CWGALLERY_ZOOM_LABEL" description="PLG_CWGALLERY_ZOOM_DESC"/>
+                    
+      <!-- SLIDER LAYOUT -->
+      <field name="layout_horizon" type="note" label="PLG_CWGALLERY_HEADER_LAYOUT_HORIZON" description="" />
+      <field name="slider_speed" filter="text" showon="layout:slider" type="text" default="400" size="5" label="PLG_CWGALLERY_SLIDER_SPEED_LABEL" description="PLG_CWGALLERY_SLIDER_SPEED_DESC"/>
+
+                     
+		</fieldset>
+	</fields>
+</form>

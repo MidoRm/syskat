@@ -1,0 +1,69 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+  
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "template_mixins.less";
+
+// COMING SOON
+//---------------------------------------------------------------
+
+#jm-coming-soon {
+	min-height: 750px;
+}
+  
+#jm-coming-soon #jm-logo {
+	text-align: center;
+  padding: 80px 0;
+}
+
+#jm-coming-soon #jm-coming-module {
+  text-align: center;
+}
+
+#countdown {
+	text-align: center;
+  p {
+    display: inline-block;
+    margin: 0 20px 20px;
+    vertical-align: middle;
+  }
+  span.days,
+  span.hours,
+  span.minutes,
+  span.seconds {
+  	height: 150px;
+  	width: 180px;
+  	display: block;
+  	font-size: 50px;
+    font-weight: 700;
+    line-height: 144px;
+    color: @JMmoduleTitleFontColor;
+    border: 5px solid @JMborder;
+  }
+  span.timeRefDays,
+  span.timeRefHours,
+  span.timeRefMinutes,
+  span.timeRefSeconds {
+  	display: block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    color: @JMbaseFontColor;
+    padding: 15px 0 0;
+    text-transform: capitalize;
+  }
+}
+

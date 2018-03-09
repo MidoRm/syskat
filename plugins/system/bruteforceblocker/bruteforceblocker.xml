@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>bruteforceblocker</name>
+	<author>Sven Bluege</author>
+	<creationDate>12/05/2016</creationDate>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>svenbluege@gmail.com</authorEmail>
+	<authorUrl>www.svenbluege.de</authorUrl>
+	<version>3.5.4.2</version>
+	<description>Blocks requests containing the url parameter username with the value admin if option=com_users</description>
+	<files>
+		<filename plugin="bruteforceblocker">bruteforceblocker.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

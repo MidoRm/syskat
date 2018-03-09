@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<playersettings>
+	<record>	
+		<!-- gallery dimensions -->
+		<galleryWidth>100%</galleryWidth>
+		<galleryHeight>100%</galleryHeight>
+		
+		<!-- dock dimenisions -->
+		<dockHeight>110</dockHeight>
+		
+		<!-- path to other configuration files -->
+		<cssStylesPath>slideShowStyles.css</cssStylesPath>
+		<imagesPath>playlist.xml</imagesPath>
+
+		<!-- background color -->
+		<bgColor>0x2C2C2C</bgColor>
+		<bgTransparency>100</bgTransparency>
+		<dockBgColor>0x111111</dockBgColor>
+		<dockBgTransparency>100</dockBgTransparency>
+		<controllersBgColor>0x000000</controllersBgColor>
+		<controllersBgTransparency>100</controllersBgTransparency>		
+
+		<!-- thumb settings -->
+		<thumbWidth>50</thumbWidth>
+		<thumbHeight>50</thumbHeight>
+		<thumbDistance>12</thumbDistance>
+		<borderThumb>1</borderThumb>
+		<borderThumbColor>0xFFFFFF</borderThumbColor>
+		<borderThumbColorTransparency>100</borderThumbColorTransparency>
+		<borderThumbColorOver>0x849ef3</borderThumbColorOver>
+		<borderThumbColorOverTransparency>100</borderThumbColorOverTransparency>
+
+		<dockScaleFactor>1.4</dockScaleFactor>
+		<randomize>false</randomize>
+		<dropShadowOnZoom>true</dropShadowOnZoom>
+
+
+		
+		
+		<!-- BORDER BIG IMAGE -->
+		<borderBigImage>4</borderBigImage>
+		<borderBigImageColor>0xFFFFFF</borderBigImageColor>
+		<borderBigImageAlpha>100</borderBigImageAlpha>			
+		
+		
+		<!-- navigation arrows settings -->
+		<showArrows>true</showArrows>
+		<navigationArrowsColor>0xFFFFFF</navigationArrowsColor>
+		<navigationArrowsTransparency>50</navigationArrowsTransparency>		
+		
+		<!-- under text descrition -->
+		<showDescription>true</showDescription>
+		<underTextColor>0x000000</underTextColor>
+		<underTextTransparency>50</underTextTransparency>
+		
+		<!-- big image transition duration -->
+		<transitionDuration>1.5</transitionDuration>
+		
+		
+		<showFullScreenBut>true</showFullScreenBut>
+		<autoPlay>6</autoPlay>
+		<loop>true</loop>		
+		<target>_blank</target>
+	</record>	
+</playersettings>

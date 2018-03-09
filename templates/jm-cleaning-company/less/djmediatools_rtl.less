@@ -1,0 +1,97 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS RTL
+//---------------------------------------------------------------
+
+.dj-slide-title,
+.dj-slide-desc-text,
+.dj-slide-desc-text a {
+  text-align: center;    
+}
+
+#djmediatools a.dj-category {
+  float: right!important;
+}
+
+.dj-galleryGrid .dj-slide {
+  float: right!important;
+}
+
+.djslider {
+  direction: ltr !important;
+}
+
+.djslider .navigation-container-custom {
+  direction: rtl !important;
+}
+
+.dj-slideshowThumbs .dj-indicators-in {
+  left: auto !important;
+  right: 0 !important;
+}
+
+.dj-slideshowThumbs .dj-load-button {
+  float: right !important;
+}
+
+.box_skitter .info_slide {
+  left: auto;
+  right: 15px;
+}
+
+.box_skitter .info_slide .image_number {
+  float: right!important;
+}
+
+// djmediatools.less
+// ------------------------
+
+//readmore
+#jm-allpage #jm-page .dj-readmore-wrapper {
+  text-align: center;
+}
+
+// slideshow thumbnails 
+#jm-allpage #jm-page .dj-slideshowThumbs {
+  .dj-load-button {
+    margin: 0 0 0 10px;
+  }
+}
+
+// tabber
+#jm-allpage #jm-page .dj-tabber {
+  .dj-tab {
+    padding: 0 0 0 10px;
+  }
+}
+
+// skitter 
+#jm-allpage #jm-page .box_skitter {
+	.image_number {
+	  float: right!important;
+	  margin: 0 0 0 10px!important;
+	}
+	&.skitter-square .prev_button,
+	&.skitter-square .next_button {
+	  right: auto!important;
+	}
+	&.skitter-square .prev_button {
+	  left: 20px!important;
+	}
+	&.skitter-square .next_button {
+	  left: 75px!important;
+	}
+}
+
+// background-ms
+#jm-allpage .background-ms .dj-slide-desc {
+	&:after {
+		left: auto;
+		right: 0;
+	}	
+}

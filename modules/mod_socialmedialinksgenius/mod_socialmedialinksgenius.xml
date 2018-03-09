@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>Social Media Links Genius</name>
+	<author>Henry Hyde</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 Genius Extenions. All rights reserved. Defualt icons provided by </copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>geniusextensions@yahoo.com</authorEmail>
+	<authorUrl>www.genuisextensions.com</authorUrl>
+	<version>1.001</version>
+	<description>Thanks For Installing Our Module</description>
+	<files>
+		<filename module="mod_socialmedialinksgenius">mod_socialmedialinksgenius.php</filename>
+		<filename>mod_socialmedialinksgenius.xml</filename>
+		<filename>index.html</filename>
+        <folder>assets/</folder>
+        <folder>tmpl/</folder>
+    </files>
+	
+	<config>
+
+		<fields name="params">
+
+	<fieldset name="basic">
+		<field name="size" type="list" default="" label="Choose Icon Size" description="Choose the size of your icons">
+			  <option value="">Normal</option>
+              <option value="fa-lg">Large</option>
+			  <option value="fa-2x">2x</option>
+			  <option value="fa-3x">3x</option>
+			  <option value="fa-4x">4x</option>
+			  <option value="fa-5x">5x</option>
+        </field>  
+
+		<field name="margin" type="text" default="2" label="Space between icons" description="Enter the amount of space you would like between icons"/>
+		<field name="background" type="color" default="" label="Background Color" description="Background Color"/>
+		<field name="color" type="color" default="" label="Icon Color" description="Icon Color"/>		
+        <field name="padding" type="text" default="5" label="Padding" description="Padding"/>
+        <field name="radius" type="text" default="3" label="Border Radius" description="Border Radius"/>
+        <field name="effect" type="radio" class="btn-group" default="yes" label="Hover Effect" description="Hover Effect">
+		    <option value="yes">Yes</option>
+			<option value="no">No</option>
+		</field>
+	
+		<field name="target" type="radio" class="btn-group" default="_blank" label="Target Window" description="Choose to open the link in a new browser window or the same window">
+				<option value="_blank">New</option>
+				<option value="_self">Same</option>
+		</field>
+	
+		<field type="spacer" name="spacer2" label="SOCIAL ICONS SETTINGS" />
+
+	    <field name="icon1" type="list" default="fa fa-amazon" label="Select an option" description="">
+	    	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url1" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon2" type="list" default="fa fa-android" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url2" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon3" type="list" default="fa fa-apple" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url3" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon4" type="list" default="fa fa-facebook" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url4" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon5" type="list" default="fa fa-google" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url5" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon6" type="list" default="fa fa-twitter" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url6" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon7" type="list" default="none" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>   
+       </field>
+
+		<field name="url7" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon8" type="list" default="none" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url8" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="icon9" type="list" default="none" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>	     
+       </field>
+
+		<field name="url9" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+        <field name="icon10" type="list" default="none" label="Select an option" description="">
+        	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		 <field name="url10" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon11" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url11" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+	    <field name="icon12" type="list" default="none" label="Select an option" description="">
+	    	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url12" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon13" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+		<field name="url13" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		
+		 <field name="icon14" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+		<field name="url14" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		
+		 <field name="icon15" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+        </field>
+
+		 <field name="url15" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon16" type="list" default="none" label="Select an option " description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url16" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+	    <field name="icon17" type="list" default="none" label="Select an option" description="">
+	    	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+        </field>
+
+		 <field name="url17" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon18" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+        </field>
+
+		<field name="url18" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon19" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url19" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon20" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url20" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+	    <field name="icon21" type="list" default="none" label="Select an option " description="">
+	    	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+		<field name="url21" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		
+		<field name="icon22" type="list" default="none" label="Select an option" description="">
+			  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		<field name="url22" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+	    <field name="icon23" type="list" default="none" label="Select an option" description="">
+	    	  <option value="">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		 <field name="url23" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon24" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+
+		 <field name="url24" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		 <field name="icon25" type="list" default="none" label="Select an option" description="">
+		 	  <option value="none">Disable</option>
+			  <option value="fa fa-amazon">Amazon</option>
+			  <option value="fa fa-android">Android</option>
+			  <option value="fa fa-apple">Apple</option>
+			  <option value="fa fa-behance">Behance</option>
+			  <option value="fa fa-delicious">Delicious</option>
+			  <option value="fa fa-digg">Digg</option>
+			  <option value="fa fa-dribbble">Dribbble</option>
+			  <option value="fa fa-dropbox">Dropbox</option>
+			  <option value="fa fa-facebook">Facebook</option>
+			  <option value="fa fa-flickr">Flickr</option>
+			  <option value="fa fa-github">Github</option>
+			  <option value="fa fa-google">Google</option>
+			  <option value="fa fa-google-plus">Google-plus</option>
+			  <option value="fa fa-instagram">Instagram</option>
+			  <option value="fa fa-linkedin">Linkedin</option>
+			  <option value="fa fa-pinterest">Pinterest</option>
+			  <option value="fa fa-skype">Skype</option>
+			  <option value="fa fa-soundcloud">Soundcloud</option>
+			  <option value="fa fa-stumbleupon">Stumbleupon</option>
+			  <option value="fa fa-tumblr">Tumblr</option>
+			  <option value="fa fa-twitter">Twitter</option>
+			  <option value="fa fa-vimeo">Vimeo</option>
+			  <option value="fa fa-windows">Windows</option>
+			  <option value="fa fa-wordpress">Wordpress</option>     
+       </field>
+		<field name="url25" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+	
+			</fieldset>
+		<fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_LAYOUT_DESC" />
+                    <field
+						name="moduleclass_sfx"
+						type="text" 
+						label="Module Class Suffix"
+						description="Put your module class suffix here" />	
+		    </fieldset>	
+		</fields>
+	</config>
+</extension>

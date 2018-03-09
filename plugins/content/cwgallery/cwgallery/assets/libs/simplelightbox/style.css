@@ -1,0 +1,47 @@
+.cwgallery { display: block; }
+.cwgallery a { display: block; float: left; position: relative; }
+.cwgallery a span {display: block; }
+.cwgallery a span {
+  height: auto;
+  -webkit-transition: -webkit-transform .15s ease;
+  -moz-transition: -moz-transform .15s ease;
+  -o-transition: -o-transform .15s ease;
+  -ms-transition: -ms-transform .15s ease;
+  transition: transform .15s ease;
+  position: relative;
+}
+.cwgallery .overlay .cmask span.ccaption > span {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.cwgallery a img { width: 100%; max-width: initial; }
+.cwgallery a.big img {
+  width: 40%;
+}
+.align-center {
+  text-align: center;
+}
+.cwgallery .cleaner { clear: both; }
+
+.cwgallery a:hover .cmask {
+  opacity: 1;
+  z-index: 9;
+}
+.cwgallery .overlay .cmask span { border: none; opacity: 0; }
+.cwgallery .overlay .cmask span.ctitle { font-size: 14px; }
+.cwgallery .overlay .cmask span.cdesc { font-size: 12px; }
+.cwgallery .overlay:hover .cmask span { opacity: 1; }
+ 
+.cwgallery .overlay .cmask { bottom: 0px;}
+
+.sl-wrapper button {
+  color: black;
+  background: transparent;
+  -webkit-box-shadow: 0 0px 0px 0;
+  -moz-box-shadow: 0 0px 0px 0;
+  box-shadow: 0 0px 0px 0;
+}
+.sl-wrapper button:hover { background: transparent; color: black; }

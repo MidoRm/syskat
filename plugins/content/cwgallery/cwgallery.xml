@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="content">
+	<name>CW Article Gallery FREE</name>
+	<author>Pavel Starý, Český WEB</author>
+	<creationDate>July 2017</creationDate>
+	<copyright>Copyright (c) 2012 - 2017 Pavel Starý - Cesky WEB s.r.o. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@cesky-web.com</authorEmail>
+	<authorUrl>http://www.cesky-web.eu</authorUrl>
+	<version>1.0.16</version>
+  <jversion>3.7.3</jversion>
+	<description><![CDATA[
+    <style>
+    .cwgall ul li.pad { padding: 0 0 10px 0; }
+    </style>
+    <div class="cwgall" style="text-align: left;">
+      <h3>Fast and Simple Image Gallery for Joomla Articles</h3>
+      <p>Plugin to display CW Gallery Tab in article edit page</p>
+      <p>It allows you to create Image Gallery inside the article by simple Drag and Drop system.</p>
+      <p>
+        <h3>Available ways of displaying gallery:</h3>
+        
+        <h4>1) Standard way</h4>
+        <div>No syntax needed, it will display on TOP or BOTTOM of article content</div>
+        <h4>2) Using syntax</h4>
+        <div>
+          <ul>
+            <li class="pad">This will override standard display settings, by using {cwgallery} inside article content in editor you can place a gallery anywhere you want.</li>
+            <li class="pad">Multiple syntaxes allowed - means that you can place multiple galleries in your article contnet. You can customize a gallery view by syntax code.</li>
+            <li class="pad">Available options are for example:
+              <ul>
+                <li><strong>start</strong> (from which image it should start loading)</li>
+                <li><strong>count</strong> (how many images should be displayed)</li>
+                <li><strong>layout</strong> (which layout to use, it will override article parameters settings or global plugin settings)</li>
+              </ul>
+            </li>
+            <li class="pad">Example: <strong>{cwgallery}</strong> - you can use editor button for placing the syntax into the article content<br/>This will display gallery view in layout defined in cw gallery settings of all article images uploaded in CW Gallery Tab</li>
+            <li class="pad">Example: <strong>{cwgallery start=2,count=10,layout=slider}</strong><br/>This will display gallery view in slider layout of 10 images from 2nd image of all article images uploaded in CW Gallery Tab</li>
+            <li>Syntax code can be redefined in plugin settings from {cwgallery} to {anything}, but choose carefully so it will not be in conflict with some other plugin syntax.</li>
+        </div>
+      </p>
+      <p><i>For more informations see documentation <a target="_blank" href="http://extensions.cesky-web.eu">here</a>.</i></p>
+    </div>
+  ]]></description>
+  <scriptfile>script.php</scriptfile>
+  <update>
+      <schemas>
+          <schemapath type="mysql">sql/updates</schemapath>
+      </schemas>
+  </update>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_cwgallery.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_cwgallery.sys.ini</language>		
+		<language tag="de-DE">language/de-DE/de-DE.plg_content_cwgallery.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.plg_content_cwgallery.sys.ini</language>		
+	</languages> 
+	<files>
+		<filename plugin="cwgallery">cwgallery.php</filename>
+		<filename>index.html</filename>
+		<folder>cwgallery</folder>
+    <folder>sql</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/plugins/content/cwgallery/cwgallery/fields">
+        <field name="path_info" type="note" label="PLG_CWGALLERY_FIELD_PATH_INFO_LABEL" description="PLG_CWGALLERY_FIELD_PATH_INFO_DESC" />               
+        <field name="syntax" class="" type="text" default="cwgallery" size="" label="PLG_CWGALLERY_FIELD_SYNTAX_LABEL" description="PLG_CWGALLERY_FIELD_SYNTAX_DESC"/>
+        <field name="path" type="text" default="/images/cwgallery/" label="PLG_CWGALLERY_FIELD_PATH_LABEL" description="PLG_CWGALLERY_FIELD_PATH_DESC"/>
+      	<field name="limit_uploadphotos" type="text" default="40" label="PLG_CWGALLERY_FIELD_LIMIT_UPLOADPHOTOS_LABEL" description="PLG_CWGALLERY_FIELD_LIMIT_UPLOADPHOTOS_DESC"/>
+      	<field name="accept_uploadphotos" multiple="true" type="list" label="PLG_CWGALLERY_FIELD_ACCEPT_UPLOADPHOTOS_LABEL" description="PLG_CWGALLERY_FIELD_ACCEPT_UPLOADPHOTOS_DESC">
+    			<option value="image/png">PNG</option>
+    			<option value="image/jpg">JPG</option>            
+          <option value="image/jpeg">JPEG</option>
+          <option value="image/gif">GIF</option>
+      	</field>
+        <field name="thumb_width" class="" type="text" default="200" size="5" label="PLG_CWGALLERY_FIELD_THUMB_WIDTH_LABEL" description=""/>        
+        <field name="thumb_height" class="" type="text" default="160" size="5" label="PLG_CWGALLERY_FIELD_THUMB_HEIGHT_LABEL" description=""/>        
+    
+        <field name="thumb_crop" class="cw_switch" type="radio"  default="1" label="PLG_CWGALLERY_FIELD_THUMB_CROP_LABEL" description="PLG_CWGALLERY_FIELD_THUMB_CROP_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="thumb_quality" class="" type="text" default="70" size="5" label="PLG_CWGALLERY_FIELD_THUMB_QUALITY_LABEL" description=""/> 
+        <field name="cwgallery_position" type="list" default="0" label="PLG_CWGALLERY_POSITION_LABEL"  description="PLG_CWGALLERY_POSITION_DESC">
+          <option value="0">PLG_CWGALLERY_POSITION_DOWN</option>
+          <option value="1">PLG_CWGALLERY_POSITION_UP</option>
+          <option value="off">PLG_CWGALLERY_POSITION_OFF</option>
+  			</field>
+        <field name="blog_use" type="list" default="0" label="PLG_CWGALLERY_BLOG_USE_LABEL"  description="PLG_CWGALLERY_BLOG_USE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+    			</field>
+        <field name="caption_color" type="list" default="light" label="PLG_CWGALLERY_CAPTION_COLOR_LABEL"  description="PLG_CWGALLERY_CAPTION_COLOR_DESC">
+          <option value="dark">PLG_CWGALLERY_CAPTION_DARK</option>
+          <option value="light">PLG_CWGALLERY_CAPTION_LIGHT</option>
+  			</field> 
+        
+  <field type="spacer" name="spacer1" hr="true" />
+  <!-- LIGHTBOX TYPE -->
+        <field name="lightbox" type="list" default="lightbox" label="PLG_CWGALLERY_LIGHTBOX_LABEL"  description="PLG_CWGALLERY_LIGHTBOX_DESC">
+          <option value="lightbox">Lightbox</option>
+          <option value="simplelightbox">Simple Lightbox</option>
+          <option value="lightgallery">LightGallery</option>
+  			</field>
+  
+    
+  <field type="spacer" name="spacer2" hr="true" />
+        <field name="show_desc_in_detail" showon="" type="list" default="" label="PLG_CWGALLERY_SHOW_DESC_IN_DETAIL_LABEL" description="PLG_CWGALLERY_SHOW_DESC_IN_DETAIL_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+  			</field>   
+        <field name="show_info_on_hover" showon="" type="list" default="" label="PLG_CWGALLERY_SHOW_INFO_ON_HOVER_LABEL" description="PLG_CWGALLERY_SHOW_INFO_ON_HOVER_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+  			</field>
+          <field name="show_caption_on_hover" showon="show_info_on_hover:1" type="list" default="" label="PLG_CWGALLERY_SHOW_CAPTION_ON_HOVER_LABEL" description="PLG_CWGALLERY_SHOW_CAPTION_ON_HOVER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+    			</field>
+          <field name="show_desc_on_hover" showon="show_info_on_hover:1" type="list" default="" label="PLG_CWGALLERY_SHOW_DESC_ON_HOVER_LABEL" description="PLG_CWGALLERY_SHOW_DESC_ON_HOVER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+    			</field>
+        
+  <field type="spacer" name="spacer3" hr="true" />
+  <!-- GALLERY TYPE -->
+        <field name="layout" type="list" default="" label="PLG_CWGALLERY_LAYOUT_LABEL"  description="PLG_CWGALLERY_LAYOUT_DESC">
+          <option value="gallery">Gallery</option>
+          <option value="slider">Slider</option>
+  			</field>
+              
+        <!-- GALLERY LAYOUT -->
+        <field name="layout_simplelightbox" type="note" label="PLG_CWGALLERY_HEADER_LAYOUT_SIMPLELIGHTBOX" description="" />     
+        <field name="columns" filter="text" showon="layout:gallery" type="text" default="" size="5" label="PLG_CWGALLERY_COLUMNS_LABEL" description="PLG_CWGALLERY_COLUMNS_GLOBAL_DESC"/>
+        <field name="border" filter="text" showon="layout:gallery" type="text" default="" size="5" label="PLG_CWGALLERY_BORDER_LABEL" description="PLG_CWGALLERY_BORDER_GLOBAL_DESC"/>
+        <field name="zoom" filter="text" showon="layout:gallery" type="text" default="" size="5" label="PLG_CWGALLERY_ZOOM_LABEL" description="PLG_CWGALLERY_ZOOM_GLOBAL_DESC"/>
+                      
+        <!-- SLIDER LAYOUT -->
+        <field name="layout_horizon" type="note" label="PLG_CWGALLERY_HEADER_LAYOUT_HORIZON" description="" />
+        <field name="slider_speed" filter="text" showon="layout:slider" type="text" default="400" size="5" label="PLG_CWGALLERY_SLIDER_SPEED_LABEL" description="PLG_CWGALLERY_SLIDER_SPEED_DESC"/>
+
+  	 </fieldset>     
+    </fields>
+  </config>
+     	
+</extension>

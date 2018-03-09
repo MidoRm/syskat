@@ -1,0 +1,101 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEGAMENU RTL
+//---------------------------------------------------------------
+
+body .dj-megamenu li.dj-up {
+  float: right;
+  &:before,
+	&:after {
+    left: auto;
+    right: 0;
+	}
+	&:after {
+  	right: auto;
+  	left: 0;
+  }
+  + li.dj-up {
+  	margin-right: -1px;
+  	margin-left: 0;
+  }
+}
+
+//first level submenu
+body .dj-megamenu {
+  li:hover,
+  li.hover {
+    div.dj-subwrap {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+//higher level submenu
+body .dj-megamenu {
+  li:hover,
+  li.hover {
+    div.dj-subwrap div.dj-subwrap {
+      left: auto;
+      right: 100%;
+    }
+  }
+}
+
+//submenu elements styles
+body .dj-megamenu .dj-subcol {
+  float: right;
+}
+
+body .dj-megamenu .dj-submenu,
+body .dj-megamenu .dj-subtree {
+  > li.parent > a {
+    &:after {
+      right: auto;
+      left: 5px;
+    }
+  }
+}
+
+//image in menu
+body .dj-megamenu {
+	li.dj-up a.dj-up_a {
+		span.image-title {
+			margin: 0 15px 0 0;
+		}
+	}
+}
+
+// submenu tree
+// --------------------------  
+body .dj-megamenu .dj-subtree {
+  > li {
+    padding: 0 15px 0 0;
+  }
+  > li > a {
+    background-position: right 50%;
+  }
+}
+
+// modules
+// --------------------------  
+
+body .dj-megamenu .modules-wrap {
+  .moduletable {
+  	> h3 {
+			&:after {
+				left: auto;
+				right: 0;
+			}
+    }
+    &:after {
+      left: auto;
+      right: 10%;
+    }
+  }
+}

@@ -1,0 +1,480 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+   
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+@import "template_mixins.less";
+
+// TEMPLATE RTL
+//---------------------------------------------------------------
+
+// layout.less
+// --------------------------  
+
+//sticky
+.sticky-bar #jm-bar-wrapp {
+  right: auto;
+  left: 0;
+}
+
+#jm-font-switcher {
+  text-align: left;
+}
+
+#jm-bottom-in {
+  &:after {
+    left: auto;
+    right: 0;
+  }
+}
+
+#jm-footer-center {
+  text-align: right;
+}
+
+#jm-footer-right {
+  text-align: left;
+}
+
+#jm-back-top {
+  right: auto;
+  left: 20px;
+}
+
+// joomla.less
+// --------------------------  
+
+// BOOTSTRAP
+//---------------------------------------------------------------
+  
+//chosen
+#jm-allpage .chzn-container .chzn-drop,
+#jm-allpage .chzn-container-single.chzn-container-single-nosearch .chzn-search {
+  left: auto;
+  right: -9999px;
+}
+
+#jm-allpage .chzn-container.chzn-with-drop .chzn-drop {
+  left: auto;
+  right: 0;
+}
+
+//chzn
+#jm-allpage {
+  .chzn-container-multi .chzn-choices li {
+    float: right;
+  }
+  .chzn-container-single .chzn-single span {
+    margin-right: 0;
+    margin-left: 26px;
+  }
+  .chzn-container-single .chzn-single div {
+    right: auto;
+    left: 8px;
+  }
+}
+
+// JOOMLA COMPONENT
+//---------------------------------------------------------------
+
+//all articles
+dl.article-info {
+  dd {
+    margin: 0 0 0 3px;
+    padding: 0 0 0 12px;
+    &:after {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+//rating and voting
+.content_vote label {
+  margin: 0 0 0 5px;
+}
+
+//article categories
+.categories-list .collapse {
+  padding: 0 @JMbaseSpace 0 0;
+}
+
+//category blog
+//article separator
+.pull-left.item-image,
+figure.pull-left {
+  margin-right: 0;
+  margin-left: @JMbaseSpace;
+}
+
+.pull-right.item-image,
+figure.pull-right {
+  margin-left: 0;
+  margin-right: @JMbaseSpace;
+}
+  
+//readmore
+p.readmore {
+  text-align: left;
+}
+
+//weblinks single category
+.weblink-count {
+  dt,
+  dd {
+    float: right;
+  }
+}
+
+//tag-category
+.tag-category {
+  .form-inline label {
+    margin-right: 0;
+    margin-left: 10px;
+  } 
+}
+
+//search component
+.phrases-box,
+fieldset.only {
+  label {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+//article index
+.article-index {
+  margin-left: 0;
+  margin-right: @JMbaseSpace;
+}
+
+// JOOMLA MODULES
+//---------------------------------------------------------------
+
+//article categories
+.categories-module li  {
+  .mod-articles-category-category a {
+    display: inline-block;
+  }
+}
+
+//article category
+.category-module li {
+  .mod-articles-category-category a {
+    display: inline-block;
+  }
+}
+
+//search module
+.form-search {
+  label.finder {
+    padding: 0 0 0 10px;
+  }
+}
+
+//popular tags
+.tagspopular.tagscloud {
+  .tag {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+} 
+
+// menus.less
+// --------------------------  
+
+.nav.menu {
+  > li.parent > a,
+  > li.parent > span.separator {
+    padding-right: 0;
+    padding-left: 10px!important;
+    &:after {
+      right: auto;
+      left: 0;
+    }
+  }
+  //first submenu level
+  .nav-child {
+   > li > a,
+   > li > span.separator {
+   	padding-left: 0;
+   	padding-right: 10px;
+	   	&:before {
+		   	margin-right: 0;
+		   	margin-left: 10px;
+	   }
+   }
+ }
+ //second submenu level
+ 	.nav-child .nav-child {
+		> li > a,
+		> li > span.separator {
+	 		padding-left: 0;
+	 		padding-right: 25px;
+	 	}
+ 	}
+ 	//third submenu level
+ 	.nav-child .nav-child .nav-child {
+		> li > a,
+		> li > span.separator {
+	 		padding-left: 0;
+	 		padding-right: 40px;
+	 	}
+ 	}
+ 	//fourth submenu level
+ 	.nav-child .nav-child .nav-child .nav-child {
+		> li > a,
+		> li > span.separator {
+	 		padding-left: 0;
+	 		padding-right: 55px;
+	 	}
+ 	}
+ 	//image
+  li a img {
+    margin: 0 0 0 15px;
+  }
+}
+
+// top-bar menu
+#jm-top-bar .nav.menu {
+  > li > a,
+  > li > span.separator {
+    padding: 0 15px 0 0;
+  }
+}
+
+#jm-top-bar .nav.menu {
+  li ul {
+    left: auto;
+    right: 0;
+  }
+  li li ul {
+    left: auto;
+    right: 100%;
+  }
+}
+
+// tags
+.tagspopular ul,
+.tagssimilar ul,
+.nav.menu.tag-ms,
+.tag-ms .nav.menu {
+  > li {
+    margin: 0 0 10px 10px;
+  }
+}
+
+.tagspopular ul,
+.tagssimilar ul {
+  > li {
+    margin: 0 0 10px 6px;
+  }
+}
+
+// modules.less
+// --------------------------  
+
+.span50 {
+  float: right !important;
+}  
+
+//color1-ms (blue)
+#jm-allpage .jm-module.color1-ms {
+	.jm-title {
+		&:after {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+#jm-allpage .color1-ms {
+	ul:not([class]) li {
+		background-image: url("../images/li-white_RTL.png");
+	}
+}
+
+//color2-ms (blue)
+#jm-allpage .jm-module.color2-ms {
+	.jm-title {
+		&:after {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+// logout topbar
+#jm-top-bar {
+  .logout-button .btn {
+    margin-left: 0!important;
+    margin-right: 10px!important;
+  }
+}
+
+// jmmoduleraw
+.jm-module-raw {
+  float: left;
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+//margin
+.jm-module.side-margin-ms {
+	margin-left: 0!important;
+	margin-right: -@JMbaseSpace!important;
+}
+
+.search-ms .search {
+  input.button,
+  button.button {
+    right: auto;
+    left: 0;
+		background: url('../images/@{JMimgDir}/search_RTL.png') no-repeat center center;
+  }
+  input#mod-search-searchword {
+    left: 100%;
+    right: auto;
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
+
+// custom html
+// ----------------------------------
+
+// special modules
+#jm-allpage #jm-page .jm-box {
+	.description {
+		&:after {
+			left: auto;
+			right: 50%;
+			margin-left: 0;
+			margin-right: -20px;
+		}
+	}
+	a:hover {
+		.description:after {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+// box-vertical
+.jm-box-vertical {
+  .jm-panel {
+    .jm-icon {
+      float: right;
+    }
+    .jm-cell {
+      float: right;
+    }
+    .title {
+      &:after {
+        left: auto;
+        right: 50%;
+        margin-left: 0;
+        margin-right: -50px;
+      }
+    }
+  }
+}
+
+// bottom modules
+.jm-bottom-box,
+.jm-bottom-box-custom {
+  .icon {
+    padding: 0 0 0 20px;
+  }
+}
+
+// table pricing
+// --------------------------
+
+#jm-allpage table.pricing {
+  float: right;
+}
+
+// editor.less
+// --------------------------  
+
+.jm-block {
+  padding: 0 60px 0 0;
+  span {
+    left: auto;
+    right: 0;
+  }
+}
+
+//colored blocks
+p.blue {
+	border-left: none;
+  border-right: 3px solid #BCE8F1;
+  padding: 0 10px 0 0;
+}
+
+p.green {
+	border-left: none;
+  border-right: 3px solid #D6E9C6;
+  padding: 0 10px 0 0;
+}
+
+p.red {
+	border-left: none;
+  border-right: 3px solid #EED3D7;
+  padding: 0 10px 0 0;
+}
+
+//icon blocks
+p,
+span {
+  &.jmbadge,
+  &.jmcalendar,
+  &.jmchat,
+  &.jmcheck,
+  &.jmcloud,
+  &.jmdirection,
+  &.jmdivide,
+  &.jmerror,
+  &.jmfire,
+  &.jmflag,
+  &.jmheart,
+  &.jmhome,
+  &.jminfo,
+  &.jmlist,
+  &.jmmail,
+  &.jmpeople,
+  &.jmstar,
+  &.jmstat {
+    padding-left: 0;
+    padding-right: 60px;
+    background-position: right top;
+  }
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+
+//import extended DJ-Megamenu styles
+@import "djmegamenu_rtl.less";
+
+//import extended DJ-Mediatools styles
+@import "djmediatools_rtl.less";
+
+//import extended DJ-Tabs styles
+@import "djtabs_rtl.less";

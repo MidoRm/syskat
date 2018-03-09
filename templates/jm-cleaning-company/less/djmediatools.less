@@ -1,0 +1,479 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS
+//---------------------------------------------------------------
+
+//remove default mediatools styles
+.dj-categories .dj-category,
+.dj-tabber,
+.box_skitter {
+  background: transparent !important;
+}
+
+.dj-categories .dj-category,
+.dj-tabber,
+.box_skitter {
+	border: none!important;
+}
+
+.dj-categories .dj-category,
+.dj-slideshow-in,
+.dj-slideshowThumbs-in,
+.dj-slideshowThumbs .dj-indicators,
+.dj-tabber,
+.dj-tabber .dj-tab,
+.box_skitter,
+.nivoSlider {
+  .box-shadow(none)!important;
+}
+
+.dj-categories,
+.dj-galleryGrid,
+.djslider-loader,
+.dj-slideshow,
+.dj-slideshowThumbs,
+.box_skitter {
+  margin: 0 auto !important;
+}
+
+//reset pagination
+#jm-allpage #jm-page {
+	.djslider-loader .load-button,
+	.dj-slideshow .dj-load-button,
+	.dj-mslider .dj-load-button {
+	  border: none;
+	  background: none;
+	  .opacity(100);
+	  box-shadow: none;
+	  .transition(background 0.2s ease-in);
+	}
+}
+
+//album title
+.dj-cat-title {
+  font-family: @JMmoduleTitleFontFamily;
+  font-size: @JMmoduleTitleFontSize;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 20px;
+  color: @JMarticleTitleFontColor;  
+}
+
+//album description
+#djmediatools .category-desc {
+  margin: 20px 0;
+}
+
+//make description not clicable
+#jm-allpage #jm-page .dj-slide-desc {
+	pointer-events: none;
+  a {
+  	pointer-events: auto;
+  }
+}
+
+//global description background
+#jm-allpage #jm-page .dj-slide-desc-bg {
+  background: @JMmediatoolsDescriptionBackground;
+  .opacity(@JMmediatoolsDescriptionOpacity);
+}
+
+#jm-allpage #jm-page .dj-slide-desc-text {
+  padding: 30px;
+  line-height: 1.2; 
+  text-align: center;
+}
+
+//global slide title
+#jm-allpage #jm-page .dj-ctitle-in,
+#jm-allpage #jm-page .dj-slide-title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;  
+  text-align: center;
+  text-transform: uppercase;
+  color: @JMmediatoolsTitleFontColor;
+  a {
+  	color: @JMmediatoolsTitleFontColor;
+  	&:hover {
+  		color: @JMstyle;
+  		text-decoration: none;
+  	}
+  }
+}
+
+#jm-allpage #jm-page .dj-slide-title {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#jm-allpage #jm-page .dj-slide-title + .dj-slide-description {
+  margin: 8px 0 0;
+}
+
+//slide description
+#jm-allpage #jm-page .dj-slide-description {
+  font-size: 16px;
+  color: @JMmediatoolsDescriptionFontColor;
+  a {
+    color: @JMmediatoolsDescriptionFontColor;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//readmore
+#jm-allpage #jm-page .dj-readmore-wrapper {
+  display: block;
+  text-align: center;
+  margin: 30px 0 0;
+  padding: 0;
+  a {
+		.readmore();
+		color: @JMmediatoolsTitleFontColor;
+		&:hover {
+			color: @JMmediatoolsTitleFontColor;
+			border-color: @JMmediatoolsReadmoreBorderHover;
+		}
+  }
+}
+
+// album View
+#jm-allpage #jm-page #djmediatools .dj-categories {
+  display: inline-block;
+  .dj-category-in {
+    background: none;
+    border: none;
+  }
+  a.dj-category,
+  a.dj-category:hover {
+    background: none;
+    border: none;
+    .box-shadow(none);
+    .border-radius(0);
+    padding: 0;
+    margin: 0;
+  }
+  .dj-ctitle-in {
+    padding: 20px;
+    text-align: center;    
+  }
+  .dj-ctitle-bg {
+    background: @JMmediatoolsDescriptionBackground;
+    .opacity(@JMmediatoolsDescriptionOpacity);
+  }
+}
+
+// gallery grid
+#jm-allpage #jm-page .dj-galleryGrid {
+  .dj-slide {
+    max-width: 100%;
+  }
+  .dj-slide-title,
+  .dj-slide-description,
+  .dj-readmore-wrapper {
+    text-align: center;
+  }
+  .dj-slide-desc {
+    height: 100%;
+    width: 100%;
+  }
+  .dj-slide-desc-in,
+  .dj-slide-desc-text {
+    height: 100%;
+    .box-sizing(border-box);
+  }
+  .dj-slide-title {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  .dj-slide-title + .dj-slide-description {
+  	margin: 15px 0 0;
+  }
+  .dj-slide-desc-text {
+    padding: 25px 45px!important;
+  }
+  .dj-readmore-wrapper {
+  	margin: 20px 0 0;
+  }
+}
+
+// modern slider
+#jm-allpage #jm-page .dj-mslider {
+  margin: 0!important;
+  .dj-indicators-in {
+    padding: 0 ;
+    height: 12px;
+    line-height: 1;
+  }
+  .dj-load-button {
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    .border-radius(50%);
+    .opacity(50)!important;
+    .transition(all 0.4s ease 0s);
+    background: @JMstyleMediatoolsNavigationColor;
+  }
+  .dj-load-button.dj-load-button-active {
+    .opacity(100)!important;
+    background: none!important;
+    .box-shadow(0 0 0 6px  @JMstyleMediatoolsNavigationColor inset)!important;
+  }
+}
+
+// slider 
+#jm-allpage #jm-page .djslider-loader {
+  .load-button {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    .border-radius(50%);
+    .opacity(50);
+    .transition(all 0.3s ease 0s);
+    background: @JMstyleMediatoolsNavigationColor;
+  }
+  .load-button.load-button-active {
+    .opacity(100);
+    background: none;
+    .box-shadow(0 0 0 6px  @JMstyleMediatoolsNavigationColor inset)!important;
+  }
+  .navigation-container-custom {
+    line-height: 1;
+    height: 12px;
+  }
+}
+
+// slideshow 
+#jm-allpage #jm-page .dj-slideshow {
+  .dj-load-button {
+    display: inline-block;
+    background: @JMmediatoolsPaginationBackground; 
+    height: 32px;
+    width: 32px;
+    .border-radius(2px);
+    .transition(all 0.2s ease-in);
+  }
+  .dj-load-button .dj-key {
+    font-size: 14px;
+    color: @JMmediatoolsPaginationFontColor;
+    line-height: 32px;
+    font-weight: normal;
+  }
+  .dj-load-button:hover,
+  .dj-load-button.dj-load-button-active {
+  	background: @JMstyleMediatoolsPaginationBackgroundHover;
+	  .dj-key {
+	    color: @JMmediatoolsPaginationFontHover;
+	  }
+	 }
+}
+
+// slideshow thumbnails 
+#jm-allpage #jm-page .dj-slideshowThumbs {
+  .dj-indicators {
+    padding: 0;
+    .box-shadow(none);
+    background: @JMmediatoolsAlbumBackground;
+  }
+  .dj-indicators-in {
+    padding: 10px 0;
+  }
+  .dj-load-button {
+    border: none;
+    .opacity(60);
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+  .dj-load-button:hover,
+  .dj-load-button-active {
+    .opacity(100);
+  }
+  .dj-indicators img {
+    max-width: none;
+  }
+}
+
+// tabber
+#jm-allpage #jm-page .dj-tabber {
+	padding: 0;
+  margin: 0 auto;
+  .dj-tab-active img,
+  .dj-tab img {
+    border: 2px solid @JMwhite;
+    margin: 10px!important;
+    .box-sizing(border-box);
+    max-width: none;
+  }
+  .dj-tab {
+    .box-shadow(none);
+    margin: 0;
+    padding: 0 10px 0 0;
+    background: @JMmediatoolsTabberBackground;
+    border-bottom: 1px solid jmlighten(@JMmediatoolsTabberBackground, 15%);
+  }
+  span.dj-tab-in {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-shadow: none;
+    color: @JMmediatoolsTitleFontColor;
+  }
+  .dj-tabs .dj-tab.dj-tab-active {
+    background: @JMmediatoolsTabberBackgroundActive;
+  }
+  .dj-tab-indicator {
+    width: 10px !important;
+    background: @JMmediatoolsTabberBackgroundActive;
+  }
+}
+
+// skitter 
+#jm-allpage #jm-page .box_skitter {
+  .label_skitter {
+    background: none;
+    .opacity(100);
+  }
+  .label_skitter p {
+    font-size: 16px;
+    letter-spacing: none;
+    font-family: inherit;
+    letter-spacing: normal;
+  }
+  .info_slide {
+    .opacity(100);
+    font-family: inherit;
+  }
+  .image_number {
+    color: @JMmediatoolsPaginationFontColor;
+    font-size: 14px;
+    .box-shadow(none);
+    .border-radius(2px);
+    padding: 0;
+    margin: 0 10px 0 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: @JMmediatoolsPaginationBackground;
+    line-height: 32px;
+    text-align: center;
+    .opacity(100);
+  }
+  .image_number.image_number_select,
+  .image_number:hover {
+    color: @JMmediatoolsPaginationFontHover;
+    .opacity(100);
+    background: @JMstyleMediatoolsPaginationBackgroundHover;
+  }
+  .info_slide {
+    padding: 0;
+  }
+  &.skitter-square .next_button,
+  &.skitter-square .prev_button {
+    top: 45px;
+    bottom: auto;
+    .opacity(70);
+  }
+  &.skitter-square .next_button:hover,
+  &.skitter-square .prev_button:hover {
+    .opacity(100);
+  }
+}
+
+// nivo slider
+#jm-allpage #jm-page {
+  .nivoSlider {
+    margin: 0!important;
+    .nivo-caption .dj-readmore-wrapper a {
+      display: inline-block!important;
+    }
+  }
+  .slider-wrapper {
+    margin: 0 auto!important;
+    .nivo-controlNav {
+      padding: 20px 0 10px!important;
+      a {
+        color: @JMmediatoolsPaginationFontColor!important;
+		    margin: 0 4px !important;
+		    .opacity(100)!important;
+		    text-indent: 0 !important;
+		    width: 32px !important;
+		    height: 32px !important;
+		    font-size: 14px !important;
+		    font-weight: normal!important;
+		    line-height: 32px !important;
+		    .transition(all 0.2s ease-in);
+		    text-decoration: none!important;
+		    .border-radius(2px)!important;
+		    background-image: none!important;
+		    background: @JMmediatoolsPaginationBackground!important;
+		    border: none!important;
+		    &:hover,
+		    &.active {
+		      color: @JMmediatoolsPaginationFontHover!important;
+		      background: @JMstyleMediatoolsPaginationBackgroundHover!important;
+		    }   
+      }
+    }
+  }
+}
+
+//kwicks panels
+@kwicksOpacity: (@JMmediatoolsDescriptionOpacity / 100);
+
+#jm-allpage #jm-page .kwicks {
+  li {
+    background: none;
+    max-width: 100%;
+  }
+  .dj-slide-desc {
+    max-width: 100%; 
+    background: rgba(red(@JMmediatoolsDescriptionBackground), green(@JMmediatoolsDescriptionBackground), blue(@JMmediatoolsDescriptionBackground), @kwicksOpacity)!important;
+    .opacity(0)!important;
+  }
+  .kwicks-expanded {
+    .dj-slide-desc {
+      .opacity(100)!important;
+    }
+  }
+}
+
+//loader   
+.dj-loader {
+  background: url("../images/ajax-loader.gif") no-repeat !important;
+  width: 128px !important;
+  height: 15px !important;
+	top: 50% !important;
+  left: 50% !important;
+	right: auto !important;
+	margin-top: -7px;
+  margin-left: -64px !important;
+} 
+
+// Suffixes
+// -------------------------- 
+
+// background-ms
+#jm-allpage .background-ms .dj-slide-desc {
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		right: auto;
+		width: 100%;
+		height: 1000px;
+		background: @JMmediatoolsDescriptionBackground;
+  	.opacity(@JMmediatoolsDescriptionOpacity);
+	}	
+}
